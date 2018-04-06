@@ -9,9 +9,14 @@ import PasswordForgetPage from './PasswordForget';
 import HomePage from './Home';
 import AccountPage from './Account';
 import * as routes from '../constants/routes';
+import {fetchApi} from '../apiCalls/apiCalls.js';
+
 
 
 class App extends Component {
+  componentDidMount() {
+    // fetchApi();
+  }
   render() {
     return (
     <div>
