@@ -12,29 +12,21 @@ describe( 'fetchApi', () => {
     ]
   })
 
+  window.fetch = jest.fn().mockImplementation( ()=> {
+    return (
+      Promise.resolve({
+        ok: true,
+        json: () => Promise.resolve(mockData)
+      })
+    )
+  })
+  
   it('should call fetch', () => {
-    window.fetch = jest.fn().mockImplementation( ()=> {
-      return (
-        Promise.resolve({
-          ok: true,
-          json: () => Promise.resolve(mockData)
-        })
-      )
-    })
-
     fetchApi();
     expect(window.fetch).toHaveBeenCalled();
   })
 
   it('should return an array of objects when status is ok', () => {
-    window.fetch = jest.fn().mockImplementation( ()=> {
-      return (
-        Promise.resolve({
-          ok: true,
-          json: () => Promise.resolve(mockData)
-        })
-      )
-    })
     expect(fetchApi()).resolves.toEqual(mockData)
   })
 
