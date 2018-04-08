@@ -18,6 +18,8 @@ import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import { uiConfig, config } from '../../firebase/firebase';
 
 firebase.initializeApp(config);
+var database = firebase.database();
+
 
 class App extends Component {
 

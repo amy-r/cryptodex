@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import * as firebase from 'firebase';
+import { addCurrency } from '../actions/addCurrency';
+import { withRouter } from 'react-router-dom';
 
 class Home extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       name: '',
-      amount: null
+      amount: ''
     }
   }
 
   handleSubmit = (event) => {
     event.preventDefault();
-    
+    const newCurrency = {...this.state}
+    this.props.addCurrency(newCurrency)
   }
 
   handleChange = (event) => {
@@ -20,9 +24,17 @@ class Home extends Component {
     this.setState({ [name]:value })
   }
 
+
+  logOut = () => {
+    firebase.auth().signOut();
+    console.log('out');
+    //need to redirect to landing page
+  }
+
   render() {
     return(
       <div>
+        <button onClick= {this.logOut} > Log Out </button>
         <form onSubmit= {this.handleSubmit}>
           <input type='text' name='name' placeholder='name' value={this.state.name} onChange={this.handleChange}/>
           <input type='text' name='amount' placeholder='amount' value={this.state.amount} onChange={this.handleChange}/>
@@ -33,9 +45,12 @@ class Home extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state) => ({
   dashboard: state.dashboard
-}
+})
 
+const mapDispatchToProps = (dispatch) => ({
+  addCurrency: (currency) => dispatch(addCurrency(currency))
+})
 
-export default connect(mapStateToProps, null)(Home);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Home));
