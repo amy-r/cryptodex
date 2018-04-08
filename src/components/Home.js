@@ -1,11 +1,41 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-const Home = () => {
-  return (
-    <div>
-      <h1>Home</h1>
-    </div>
-  )
+class Home extends Component {
+  constructor() {
+    super();
+    this.state = {
+      name: '',
+      amount: null
+    }
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    
+  }
+
+  handleChange = (event) => {
+    const { value, name } = event.target;
+    this.setState({ [name]:value })
+  }
+
+  render() {
+    return(
+      <div>
+        <form onSubmit= {this.handleSubmit}>
+          <input type='text' name='name' placeholder='name' value={this.state.name} onChange={this.handleChange}/>
+          <input type='text' name='amount' placeholder='amount' value={this.state.amount} onChange={this.handleChange}/>
+          <input type='submit' />
+        </form>  
+      </div>
+    )
+  }
 }
 
-export default Home;
+const mapStateToProps = (state) => {
+  dashboard: state.dashboard
+}
+
+
+export default connect(mapStateToProps, null)(Home);

@@ -13,7 +13,11 @@ import { connect } from 'react-redux';
 import { addDashboard } from '../../actions/addDashboard';
 import TopTen from '../TopTen/TopTen';
 import * as helper from '../../helper/helper';
+import * as firebase from 'firebase';
+import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
+import { uiConfig, config } from '../../firebase/firebase';
 
+firebase.initializeApp(config);
 
 class App extends Component {
 
@@ -38,6 +42,7 @@ class App extends Component {
       <Route exact path='/pw-forget' component={PasswordForgetPage} />
       <Route exact path='/home' component={HomePage} /> 
       <Route exact path='/account' component={AccountPage} /> 
+      <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
       <TopTen />
     </div>
     );
