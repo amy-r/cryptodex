@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import * as firebase from 'firebase';
 import { addCurrency } from '../actions/addCurrency';
 import { withRouter } from 'react-router-dom';
+import { writeCurrency } from '../helper/firebaseFunctions.js'
 
 class Home extends Component {
   constructor(props) {
@@ -17,6 +18,7 @@ class Home extends Component {
     event.preventDefault();
     const newCurrency = {...this.state}
     this.props.addCurrency(newCurrency)
+    writeCurrency(newCurrency)
   }
 
   handleChange = (event) => {

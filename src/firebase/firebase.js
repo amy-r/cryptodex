@@ -21,3 +21,4 @@ export const uiConfig = {
     firebase.auth.GoogleAuthProvider.PROVIDER_ID,
   ]
 };
+

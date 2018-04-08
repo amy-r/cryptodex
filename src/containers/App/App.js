@@ -17,7 +17,7 @@ import * as firebase from 'firebase';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import { uiConfig, config } from '../../firebase/firebase';
 
-firebase.initializeApp(config);
+// firebase.initializeApp(config);
 var database = firebase.database();
 
 
