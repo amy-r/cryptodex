@@ -12,3 +12,4 @@ export const writeCurrency = (curr) => {
     throw new Error(`error adding currency : ${error}` )
   }
 }
+

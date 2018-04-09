@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as firebase from 'firebase';
 import { addCurrency } from '../actions/addCurrency';
+import { addUser } from '../actions/addUser';
 import { withRouter } from 'react-router-dom';
 import { writeCurrency } from '../helper/firebaseFunctions.js'
 
@@ -12,6 +13,21 @@ class Home extends Component {
       name: '',
       amount: ''
     }
+  }
+
+  componentDidMount = () => {
+    console.log(this.props)
+    firebase.auth().onAuthStateChanged( (user) => {
+      if (user) {
+        // User is signed in.
+        const displayName = user.displayName;
+        const uid = user.uid;
+        const userInfo = { displayName, uid}
+        console.log(uid)
+        this.props.logIn(userInfo)
+         
+      };
+    })  
   }
 
   handleSubmit = (event) => {
@@ -52,7 +68,8 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  addCurrency: (currency) => dispatch(addCurrency(currency))
+  addCurrency: (currency) => dispatch(addCurrency(currency)),
+  logIn: (user) => dispatch(addUser(user))
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Home));

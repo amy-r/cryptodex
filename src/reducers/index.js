@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
 import dashboard from './dashboard-reducer';
-import currency from './currencyReducer'
+import currency from './currencyReducer';
+import user from './userReducer';
 
 const rootReducer = combineReducers({
   dashboard,
-  currency
+  currency,
+  user
 })
 
 export default rootReducer;
