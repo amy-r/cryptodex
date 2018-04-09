@@ -30,7 +30,7 @@ class Home extends Component {
   logOut = () => {
     firebase.auth().signOut();
     console.log('out');
-    //need to redirect to landing page
+    this.props.history.push('/')
   }
 
   render() {

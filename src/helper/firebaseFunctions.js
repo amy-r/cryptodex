@@ -4,7 +4,7 @@ export const firebaseApp = firebase.initializeApp(config);
 
 export const writeCurrency = (curr) => {
   try {
-    firebaseApp.database().ref('currency/').set({
+    firebaseApp.database().ref('currency/' ).set({
       name: curr.name,
       amount: curr.amount
     });
