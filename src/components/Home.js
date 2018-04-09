@@ -16,25 +16,25 @@ class Home extends Component {
   }
 
   componentDidMount = () => {
-    console.log(this.props)
     firebase.auth().onAuthStateChanged( (user) => {
       if (user) {
-        // User is signed in.
         const displayName = user.displayName;
         const uid = user.uid;
         const userInfo = { displayName, uid}
-        console.log(uid)
-        this.props.logIn(userInfo)
-         
-      };
+        this.props.logIn(userInfo)         
+      } else {
+        this.props.history.push('/')
+      }
     })  
   }
 
   handleSubmit = (event) => {
+    const { addCurrency, user } = this.props
     event.preventDefault();
     const newCurrency = {...this.state}
-    this.props.addCurrency(newCurrency)
-    writeCurrency(newCurrency)
+    addCurrency(newCurrency)
+    console.log(user)
+    writeCurrency(user.uid, newCurrency)
   }
 
   handleChange = (event) => {
@@ -42,17 +42,15 @@ class Home extends Component {
     this.setState({ [name]:value })
   }
 
-
   logOut = () => {
     firebase.auth().signOut();
-    console.log('out');
     this.props.history.push('/')
   }
 
   render() {
     return(
       <div>
-        <button onClick= {this.logOut} > Log Out </button>
+        <button onClick= {this.logOut}> Log Out </button>
         <form onSubmit= {this.handleSubmit}>
           <input type='text' name='name' placeholder='name' value={this.state.name} onChange={this.handleChange}/>
           <input type='text' name='amount' placeholder='amount' value={this.state.amount} onChange={this.handleChange}/>
@@ -64,7 +62,8 @@ class Home extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  dashboard: state.dashboard
+  dashboard: state.dashboard,
+  user: state.user
 })
 
 const mapDispatchToProps = (dispatch) => ({
