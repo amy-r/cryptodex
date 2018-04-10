@@ -17,6 +17,7 @@ export const trimData = (dashboard) => {
     return {
       'currency': curr.currency, 
       'marketCap': curr.marketCap
+      
     }
   })
 }

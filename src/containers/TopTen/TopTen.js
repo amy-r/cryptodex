@@ -5,7 +5,7 @@ const TopTen = (props) => {
 
   const tableData = props.dashboard.map( (curr) => {
     return (      
-      <tr>
+      <tr key= {curr.currency}>
         <td> {curr.currency} </td>
         <td> {curr.marketCap} </td>
         <td> {curr.percentage} </td>
@@ -16,12 +16,14 @@ const TopTen = (props) => {
   return (
     <div>
       <table>
-        <tr>
-          <td> Currency </td>
-          <td> Market Cap </td>
-          <td> % </td>
-        </tr>
+        <tbody>
+          <tr>
+            <td> Currency </td>
+            <td> Market Cap </td>
+            <td> % </td>
+          </tr>
         {tableData}
+        </tbody>
       </table>
     </div>
   )
