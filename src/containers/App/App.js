@@ -33,6 +33,8 @@ class App extends Component {
       <Route exact path='/home' component={HomePage} /> 
       <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
       <TopTen />
+      <div className='content-container'/>
+      <div className='blur' />
     </div>
     );
   }
