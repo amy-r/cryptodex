@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import './TopTen.css';
 
 const TopTen = (props) => {
 
@@ -14,7 +15,7 @@ const TopTen = (props) => {
   })
 
   return (
-    <div>
+    <div className='TopTen'>
       <table>
         <tbody>
           <tr>
