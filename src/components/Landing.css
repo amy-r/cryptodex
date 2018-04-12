@@ -2,13 +2,18 @@
 
 .landing {
   color: white;
-  position: absolute;
+  position: relative;
   z-index: 10;
+  text-align: center;
 }
 
 h1 {
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 10px;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
 }
 
 .crypto {

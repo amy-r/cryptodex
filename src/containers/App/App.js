@@ -31,8 +31,8 @@ class App extends Component {
       <Navigation />
       <Route exact path='/' component={LandingPage} />
       <Route exact path='/home' component={HomePage} /> 
-      <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
       <TopTen />
+      <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} /> 
       <div className='content-container'/>
       <div className='blur' />
     </div>
