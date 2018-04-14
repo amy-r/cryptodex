@@ -28,11 +28,9 @@ class App extends Component {
   render() {
     return (
     <div>
-      <Navigation />
       <Route exact path='/' component={LandingPage} />
       <Route exact path='/home' component={HomePage} /> 
       <TopTen />
-      <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} /> 
       <div className='content-container'/>
       <div className='blur' />
     </div>
