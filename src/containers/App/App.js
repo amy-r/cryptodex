@@ -3,7 +3,7 @@ import './App.css';
 import { Route, NavLink, Link, withRouter } from 'react-router-dom'
 import Navigation from '../../components/Navigation';
 import LandingPage from '../../components/Landing';
-import HomePage from '../../components/Home';
+import HomePage from '../Home/Home';
 import { fetchApi } from '../../apiCalls/apiCalls.js';
 import { connect } from 'react-redux';
 import { addDashboard } from '../../actions/addDashboard';
