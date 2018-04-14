@@ -7,8 +7,8 @@ export const writeCurrency = (user, curr) => {
     firebaseApp.database().ref(user).update({
       [curr.name]: curr.amount,
     });
-  } catch (error) {
-    throw new Error(`error adding currency : ${error}` )
+  } catch (err) {
+    throw new Error(`Could not add currency: ${err}` )
   }
 }
 
