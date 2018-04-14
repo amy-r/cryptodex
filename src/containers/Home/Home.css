@@ -1,0 +1,18 @@
+h1 {
+  color: white;
+  position: relative;
+  z-index: 10;
+  display: inline;
+}
+
+.logout {
+  float: right;
+  position: relative;
+  z-index: 11;
+  display: inline;
+}
+
+form {
+  position: relative;
+  z-index: 12
+}

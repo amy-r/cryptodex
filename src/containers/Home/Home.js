@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as firebase from 'firebase';
-import { addCurrency } from '../actions/addCurrency';
-import { addUser } from '../actions/addUser';
+import { addCurrency } from '../../actions/addCurrency';
+import { addUser } from '../../actions/addUser';
 import { withRouter } from 'react-router-dom';
-import { writeCurrency } from '../helper/firebaseFunctions.js'
+import { writeCurrency } from '../../helper/firebaseFunctions.js';
+import './Home.css';
 
 class Home extends Component {
   constructor(props) {
@@ -50,7 +51,10 @@ class Home extends Component {
   render() {
     return(
       <div>
-        <button onClick= {this.logOut}> Log Out </button>
+        <header>
+          <h1> <span className='crypto'>CRYPTO</span><span className='dex'>DEX</span></h1>
+          <button className='logout' onClick= {this.logOut}> Log Out </button>     
+        </header>
         <form onSubmit= {this.handleSubmit}>
           <input type='text' name='name' placeholder='name' value={this.state.name} onChange={this.handleChange}/>
           <input type='text' name='amount' placeholder='amount' value={this.state.amount} onChange={this.handleChange}/>
