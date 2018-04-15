@@ -6,6 +6,7 @@ import { addUser } from '../../actions/addUser';
 import { getUserPortfolio } from '../../actions/getUserPortfolio';
 import { withRouter } from 'react-router-dom';
 import { writeCurrency, getUserData } from '../../helper/firebaseFunctions.js';
+import UserPortfolio from '../UserPortfolio/UserPortfolio'
 import './Home.css';
 
 class Home extends Component {
@@ -17,7 +18,7 @@ class Home extends Component {
     }
   }
 
-  componentDidMount = () => {
+  componentDidMount = async () => {
     firebase.auth().onAuthStateChanged( (user) => {
       if (user) {
         const displayName = user.displayName;
@@ -26,28 +27,27 @@ class Home extends Component {
         this.props.logIn(userInfo);     
         getUserData(uid).then((portfolio) => this.props.getUserPortfolio(portfolio));
       } else {
-        this.props.history.push('/')
+        this.props.history.push('/');
       }
     }) 
   }
 
   handleSubmit = (event) => {
-    const { addCurrency, user } = this.props
+    const { addCurrency, user } = this.props;
     event.preventDefault();
-    const newCurrency = {...this.state}
-    addCurrency(newCurrency)
-    console.log(user)
-    writeCurrency(user.uid, newCurrency)
+    const newCurrency = {...this.state};
+    addCurrency(newCurrency);
+    writeCurrency(user.uid, newCurrency);
   }
 
   handleChange = (event) => {
     const { value, name } = event.target;
-    this.setState({ [name]:value })
+    this.setState({ [name]:value });
   }
 
   logOut = () => {
     firebase.auth().signOut();
-    this.props.history.push('/')
+    this.props.history.push('/');
   }
 
   render() {
@@ -62,6 +62,7 @@ class Home extends Component {
           <input type='text' name='amount' placeholder='amount' value={this.state.amount} onChange={this.handleChange}/>
           <input type='submit' />
         </form>  
+        <UserPortfolio />
       </div>
     )
   }
