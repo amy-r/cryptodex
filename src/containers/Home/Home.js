@@ -3,8 +3,9 @@ import { connect } from 'react-redux';
 import * as firebase from 'firebase';
 import { addCurrency } from '../../actions/addCurrency';
 import { addUser } from '../../actions/addUser';
+import { getUserPortfolio } from '../../actions/getUserPortfolio';
 import { withRouter } from 'react-router-dom';
-import { writeCurrency } from '../../helper/firebaseFunctions.js';
+import { writeCurrency, getUserData } from '../../helper/firebaseFunctions.js';
 import './Home.css';
 
 class Home extends Component {
@@ -21,12 +22,13 @@ class Home extends Component {
       if (user) {
         const displayName = user.displayName;
         const uid = user.uid;
-        const userInfo = { displayName, uid}
-        this.props.logIn(userInfo)         
+        const userInfo = { displayName, uid};
+        this.props.logIn(userInfo);     
+        getUserData(uid).then((portfolio) => this.props.getUserPortfolio(portfolio));
       } else {
         this.props.history.push('/')
       }
-    })  
+    }) 
   }
 
   handleSubmit = (event) => {
@@ -72,7 +74,8 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   addCurrency: (currency) => dispatch(addCurrency(currency)),
-  logIn: (user) => dispatch(addUser(user))
+  logIn: (user) => dispatch(addUser(user)),
+  getUserPortfolio: (portfolio) => dispatch(getUserPortfolio(portfolio))
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Home));

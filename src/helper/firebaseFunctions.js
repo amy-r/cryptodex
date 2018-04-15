@@ -12,3 +12,13 @@ export const writeCurrency = (user, curr) => {
   }
 }
 
+export const getUserData = async (userId) => {
+  try {
+    const ref = firebase.database().ref(`${userId}`)
+    const userData = await ref.once('value');
+    const userPortfolio = await userData.val();
+    return userPortfolio;
+  } catch (err) {
+    throw new Error('Could not get user data')
+  }  
+}
