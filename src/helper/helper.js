@@ -40,9 +40,39 @@ export const createCapPercentage = (dashboard) => {
   return finalCurrency
 }
 
+export const removeMismatches = (portfolio, dashboard) => {
+  const userCurs = Object.keys(portfolio);
+  const dashboardCurs = dashboard.map( (curr) => {
+    return curr.currency
+  })
+
+  const matchedCurrencyNames = userCurs.filter( (name) => {
+    return dashboardCurs.includes(name) 
+  })
+
+  return matchedCurrencyNames 
+}
+
+export const rejoinMatches = (matches, portfolio) => {
+  const portfolioKeys = Object.keys(portfolio)
+  const newPortfolio = matches.reduce( (obj, match) => {
+    obj[match] = portfolio[match];
+    return obj
+  }, {})
+  return newPortfolio
+}
+
 export const calculateValue = (portfolio, dashboard) => {
   if (portfolio && dashboard) {
     const currencyNames = Object.keys(portfolio);
+    // const dashboardName = dashboard.map((curr) => {
+    //   return curr.currency
+    // })
+
+    // const matchedCurrencies = currencyNames.filter( (name) => {
+    //   return dashboardName.includes(name) 
+    // })
+
 
     const values = currencyNames.map( (curr) => {
       const match = dashboard.find((dashCurr) => {

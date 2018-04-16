@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './UserPortfolio.css';
-import { calculateValue, calculatePercent } from '../../helper/helper';
+import { calculateValue, calculatePercent, removeMismatches, rejoinMatches } from '../../helper/helper';
 
 class UserPortfolio extends Component {
 
@@ -12,11 +12,13 @@ class UserPortfolio extends Component {
 
   getPortfolio =  (props) => {
     const { portfolio, dashboard } = this.props;
-    const values =  calculateValue(portfolio, dashboard);
+    const matchedPortfolio = removeMismatches(portfolio, dashboard);
+    const newPortfolio = rejoinMatches(matchedPortfolio, portfolio);
+    const values =  calculateValue(newPortfolio, dashboard);
     const percentages = calculatePercent(values);
 
     if (portfolio) {
-      const port = Object.keys(portfolio).map( (currency, currIndex) => {
+      const port = Object.keys(newPortfolio).map( (currency, currIndex) => {
         return(
           <tr key= {currency}>
             <td> {currency} </td>
@@ -26,8 +28,7 @@ class UserPortfolio extends Component {
           </tr>
         )
       })
-      
-    return port
+      return port
     }
   }
 

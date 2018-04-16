@@ -60,33 +60,33 @@ class Home extends Component {
   }
 
   render() {
-      return (
-        <div>
-          <header>
-            <h1> <span className='crypto'>CRYPTO</span><span className='dex'>DEX</span></h1>
-            <button className='logout' onClick= {this.logOut}> Log Out </button>     
-          </header>
-          <div className='body'>
-            <div className= 'left'>
-              <UserPortfolio />
-              <h4> Add a currency you own </h4>
-              <form onSubmit= {this.handleSubmit}>
-                <select name='name' onChange={this.handleChange}>
-                 <option value='samle'>Sample</option>
-                 {this.createOptions()}
-                </select>  
-                <input type='text' name='amount' placeholder='amount' value={this.state.amount} onChange={this.handleChange}/>
-                <input type='submit' />
-              </form>
-            </div>  
-            <div class ='right'>
-              <h2> Today's Market </h2>  
-              <TopTen />
-            </div>
-          </div>    
-        </div>
-      )   
-   }
+    return (
+      <div>
+        <header>
+          <h1> <span className='crypto'>CRYPTO</span><span className='dex'>DEX</span></h1>
+          <button className='logout' onClick= {this.logOut}> Log Out </button>     
+        </header>
+        <div className='body'>
+          <div className= 'left'>
+            <UserPortfolio />
+            <h4> Add a currency you own </h4>
+            <form onSubmit= {this.handleSubmit}>
+              <select name='name' onChange={this.handleChange}>
+               <option value='samle'>Sample</option>
+               {this.createOptions()}
+              </select>  
+              <input type='text' name='amount' placeholder='amount' value={this.state.amount} onChange={this.handleChange}/>
+              <input type='submit' />
+            </form>
+          </div>  
+          <div class ='right'>
+            <h2> Today's Market </h2>  
+            <TopTen />
+          </div>
+        </div>    
+      </div>
+    )   
+  }
 }
 
 const mapStateToProps = (state) => ({
