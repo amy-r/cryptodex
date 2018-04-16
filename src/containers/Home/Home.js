@@ -35,7 +35,7 @@ class Home extends Component {
   handleSubmit = (event) => {
     const { addCurrency, user } = this.props;
     event.preventDefault();
-    const newCurrency = {...this.state};
+    const newCurrency = {...this.state}
     addCurrency(newCurrency);
     writeCurrency(user.uid, newCurrency);
   }
@@ -57,12 +57,12 @@ class Home extends Component {
           <h1> <span className='crypto'>CRYPTO</span><span className='dex'>DEX</span></h1>
           <button className='logout' onClick= {this.logOut}> Log Out </button>     
         </header>
+        <UserPortfolio />
         <form onSubmit= {this.handleSubmit}>
           <input type='text' name='name' placeholder='name' value={this.state.name} onChange={this.handleChange}/>
           <input type='text' name='amount' placeholder='amount' value={this.state.amount} onChange={this.handleChange}/>
           <input type='submit' />
         </form>  
-        <UserPortfolio />
       </div>
     )
   }

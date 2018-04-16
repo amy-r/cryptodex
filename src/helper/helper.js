@@ -16,8 +16,8 @@ export const trimData = (dashboard) => {
   return dashboard.map( (curr) => {
     return {
       'currency': curr.currency, 
-      'marketCap': curr.marketCap
-      
+      'marketCap': curr.marketCap,
+      'price': curr.close
     }
   })
 }
@@ -39,3 +39,20 @@ export const createCapPercentage = (dashboard) => {
   })
   return finalCurrency
 }
+
+export const calculateValue = (portfolio, dashboard) => {
+  const currencyNames = Object.keys(portfolio);
+  const values = currencyNames.map( (curr) => {
+    return dashboard.map( (topTen) => {
+      if (topTen.currency === curr) {
+        const price = topTen.price;
+        const value = price * portfolio[curr];
+        console.log(value)
+        return value
+      }
+    })
+  })
+  return values
+} 
+
+// need calculate values to take in a currency name, 
