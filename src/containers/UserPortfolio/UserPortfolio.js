@@ -2,21 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './UserPortfolio.css';
 import { calculateValue, calculatePercent } from '../../helper/helper';
-import { updateValue } from '../../helper/firebaseFunctions';
 
 class UserPortfolio extends Component {
-  constructor() {
-    super();
-  }
-
-  getValues = () => {
-    const {portfolio, dashboard, user} = this.props;
-    // console.log(portfolio)
-    // const values = portfolio.map( (userCurr) => {
-    //   calculateValue(userCurr, dashboard)
-    // })
-    // console.log(values)
-  }
 
   updateValues = () => {
     const { portfolio } = this.props;
@@ -26,11 +13,11 @@ class UserPortfolio extends Component {
   getPortfolio = (props) => {
     const {portfolio, dashboard} = this.props;
     const values =  calculateValue(portfolio, dashboard);
-    const percentages = calculatePercent(values)
+    const percentages = calculatePercent(values);
 
     return Object.keys(portfolio).map( (currency, currIndex) => {
       return(
-        <tr>
+        <tr key= {currency}>
           <td> {currency} </td>
           <td> {portfolio[currency]} </td>
           <td> {values[currIndex]} </td>
@@ -43,13 +30,17 @@ class UserPortfolio extends Component {
   render() {
     return (
       <div>
-        <h1> i'm your portfolio </h1>
+        <h2> Your Portfolio </h2>
         <table className= 'user-portfolio'>
-            <th> Currency </th>
-            <th> Amount </th>
-            <th> Value </th>
-            <th> percentage </th>
+          <tbody>
+            <tr>
+              <th> Currency </th>
+              <th> Amount </th>
+              <th> Value </th>
+              <th> Percentage </th>
+            </tr>
             {this.getPortfolio()}
+          </tbody>  
         </table>
       </div>
     )

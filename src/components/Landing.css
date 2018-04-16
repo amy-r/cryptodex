@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
 
 .landing {
-  color: white;
   position: relative;
   z-index: 10;
   text-align: center;
@@ -10,10 +9,12 @@
 h1 {
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 10px;
+  color: white;
 }
 
 p {
   font-family: 'Open Sans', sans-serif;
+  color: white;
 }
 
 .crypto {

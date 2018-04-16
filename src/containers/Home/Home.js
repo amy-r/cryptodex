@@ -6,7 +6,8 @@ import { addUser } from '../../actions/addUser';
 import { getUserPortfolio } from '../../actions/getUserPortfolio';
 import { withRouter } from 'react-router-dom';
 import { writeCurrency, getUserData } from '../../helper/firebaseFunctions.js';
-import UserPortfolio from '../UserPortfolio/UserPortfolio'
+import UserPortfolio from '../UserPortfolio/UserPortfolio';
+import TopTen from '../TopTen/TopTen';
 import './Home.css';
 
 class Home extends Component {
@@ -57,12 +58,21 @@ class Home extends Component {
           <h1> <span className='crypto'>CRYPTO</span><span className='dex'>DEX</span></h1>
           <button className='logout' onClick= {this.logOut}> Log Out </button>     
         </header>
-        <UserPortfolio />
-        <form onSubmit= {this.handleSubmit}>
-          <input type='text' name='name' placeholder='name' value={this.state.name} onChange={this.handleChange}/>
-          <input type='text' name='amount' placeholder='amount' value={this.state.amount} onChange={this.handleChange}/>
-          <input type='submit' />
-        </form>  
+        <div className='body'>
+          <div className= 'left'>
+            <UserPortfolio />
+            <h4> Add a currency you own </h4>
+            <form onSubmit= {this.handleSubmit}>
+              <input type='text' name='name' placeholder='name' value={this.state.name} onChange={this.handleChange}/>
+              <input type='text' name='amount' placeholder='amount' value={this.state.amount} onChange={this.handleChange}/>
+              <input type='submit' />
+            </form>
+          </div>  
+          <div class ='right'>
+            <h2> Today's Market </h2>  
+            <TopTen />
+          </div>
+        </div>    
       </div>
     )
   }
