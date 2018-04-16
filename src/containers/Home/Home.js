@@ -54,7 +54,7 @@ class Home extends Component {
   createOptions = () => {
     const { dashboard } = this.props
     const options = dashboard.map( (curr) => {
-      return <option value={curr.currency}>{curr.currency}</option>
+      return <option value={curr.currency}> {curr.currency} </option>
     })
     return options
   }

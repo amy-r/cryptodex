@@ -8,3 +8,9 @@
 h1 {
   color: red;
 }
+
+.outliers {
+  position: relative;
+  z-index: 10;
+  background-color: white;
+}
