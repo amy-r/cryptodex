@@ -19,7 +19,7 @@ class Home extends Component {
     }
   }
 
-  componentWillMount = () => {
+  componentDidMount = () => {
     firebase.auth().onAuthStateChanged( (user) => {
       if (user) {
         const displayName = user.displayName;
@@ -39,6 +39,9 @@ class Home extends Component {
     const newCurrency = {...this.state}
     addCurrency(newCurrency);
     writeCurrency(user.uid, newCurrency);
+    this.setState({name: '', amount: ''});
+    getUserData(user.uid).then((portfolio) => this.props.getUserPortfolio(portfolio));
+
   }
 
   handleChange = (event) => {
@@ -54,7 +57,7 @@ class Home extends Component {
   createOptions = () => {
     const { dashboard } = this.props
     const options = dashboard.map( (curr) => {
-      return <option value={curr.currency}> {curr.currency} </option>
+      return <option key={curr.currency} value={curr.currency}> {curr.currency} </option>
     })
     return options
   }
@@ -79,7 +82,7 @@ class Home extends Component {
               <input type='submit' />
             </form>
           </div>  
-          <div class ='right'>
+          <div className='right'>
             <h2> Today's Market </h2>  
             <TopTen />
           </div>
@@ -91,7 +94,8 @@ class Home extends Component {
 
 const mapStateToProps = (state) => ({
   dashboard: state.dashboard,
-  user: state.user
+  user: state.user,
+  portfolio: state.portfolio
 })
 
 const mapDispatchToProps = (dispatch) => ({

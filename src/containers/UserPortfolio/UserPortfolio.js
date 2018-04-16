@@ -5,11 +5,6 @@ import { calculateValue, calculatePercent, removeMismatches, rejoinMatches, find
 
 class UserPortfolio extends Component {
 
-  updateValues = () => {
-    const { portfolio } = this.props;
-    console.log(portfolio)
-  }
-
   getPortfolio = (props) => {
     const { portfolio, dashboard } = this.props;
     const matchedPortfolio = removeMismatches(portfolio, dashboard);

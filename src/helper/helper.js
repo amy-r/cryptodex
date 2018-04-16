@@ -41,43 +41,48 @@ export const createCapPercentage = (dashboard) => {
 }
 
 export const removeMismatches = (portfolio, dashboard) => {
-  const userCurs = Object.keys(portfolio);
-  const dashboardCurs = dashboard.map( (curr) => {
-    return curr.currency
-  })
+  if (portfolio && dashboard) {
+    const userCurs = Object.keys(portfolio);
+    const dashboardCurs = dashboard.map( (curr) => {
+      return curr.currency
+    })
 
-  const matchedCurrencyNames = userCurs.filter( (name) => {
-    return dashboardCurs.includes(name) 
-  })
+    const matchedCurrencyNames = userCurs.filter( (name) => {
+      return dashboardCurs.includes(name) 
+    })
 
-  return matchedCurrencyNames 
+    return matchedCurrencyNames 
+  }
 }
 
 export const findMismatches = (portfolio, dashboard) => {
-  const userCurs = Object.keys(portfolio);
-  const dashboardCurs = dashboard.map( (curr) => {
-    return curr.currency
-  })
+  if (portfolio && dashboard) {
+    const userCurs = Object.keys(portfolio);
+    const dashboardCurs = dashboard.map( (curr) => {
+      return curr.currency
+    })
 
-  const mismatchNames = userCurs.filter( (name) => {
-    return !dashboardCurs.includes(name) 
-  })
+    const mismatchNames = userCurs.filter( (name) => {
+      return !dashboardCurs.includes(name) 
+    })
 
-  const mismatches = mismatchNames.reduce( (obj, mismatch) => {
-    obj[mismatch] = portfolio[mismatch];
-    return obj;
-  }, {}); 
+    const mismatches = mismatchNames.reduce( (obj, mismatch) => {
+      obj[mismatch] = portfolio[mismatch];
+      return obj;
+    }, {}); 
 
-  return mismatches
+    return mismatches
+  } 
 }
 
 export const rejoinMatches = (matches, portfolio) => {
-  const portfolioKeys = Object.keys(portfolio)
-  const newPortfolio = matches.reduce( (obj, match) => {
-    obj[match] = portfolio[match];
-    return obj
-  }, {})
-  return newPortfolio
+  if (matches && portfolio) {
+    const newPortfolio = matches.reduce( (obj, match) => {
+      obj[match] = portfolio[match];
+      return obj
+    }, {})
+    return newPortfolio
+  }  
 }
 
 export const calculateValue = (portfolio, dashboard) => {
