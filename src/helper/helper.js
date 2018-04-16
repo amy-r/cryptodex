@@ -41,30 +41,34 @@ export const createCapPercentage = (dashboard) => {
 }
 
 export const calculateValue = (portfolio, dashboard) => {
-  const currencyNames = Object.keys(portfolio);
+  if (portfolio && dashboard) {
+    const currencyNames = Object.keys(portfolio);
 
-  const values = currencyNames.map( (curr) => {
-    const match = dashboard.find((dashCurr) => {
-      return dashCurr.currency === curr
+    const values = currencyNames.map( (curr) => {
+      const match = dashboard.find((dashCurr) => {
+        return dashCurr.currency === curr
+      })
+
+      const price = match.price
+      const value = price * portfolio[curr]
+      return parseFloat(Math.max(value, 2.8).toFixed(2))
     })
-
-    const price = match.price
-    const value = price * portfolio[curr]
-    return parseFloat(Math.max(value, 2.8).toFixed(2))
-  })
-  
-  return values
+    
+    return values
+    
+  } else {
+    return []
+  }  
 } 
 
-export const calculatePercent = (values) => {
+export const calculatePercent = (values) => {   
+    const total = values.reduce( (a, b) => a+b, 0)
 
-  const total = values.reduce( (a, b) => a+b, 0)
+    const totalsArr = values.map( (curr) => {
+      const percentage = (curr/total) * 100;
+      const rounded = parseFloat(percentage.toFixed(2));
+      return rounded
+    })
 
-  const totalsArr = values.map( (curr) => {
-    const percentage = (curr/total) * 100;
-    const rounded = parseFloat(percentage.toFixed(2));
-    return rounded
-  })
-
-  return totalsArr
+    return totalsArr
 }

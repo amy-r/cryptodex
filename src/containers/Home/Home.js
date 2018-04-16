@@ -14,12 +14,12 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: '',
+      name: 'BTC',
       amount: ''
     }
   }
 
-  componentDidMount = async () => {
+  componentWillMount = () => {
     firebase.auth().onAuthStateChanged( (user) => {
       if (user) {
         const displayName = user.displayName;
@@ -51,31 +51,42 @@ class Home extends Component {
     this.props.history.push('/');
   }
 
-  render() {
-    return(
-      <div>
-        <header>
-          <h1> <span className='crypto'>CRYPTO</span><span className='dex'>DEX</span></h1>
-          <button className='logout' onClick= {this.logOut}> Log Out </button>     
-        </header>
-        <div className='body'>
-          <div className= 'left'>
-            <UserPortfolio />
-            <h4> Add a currency you own </h4>
-            <form onSubmit= {this.handleSubmit}>
-              <input type='text' name='name' placeholder='name' value={this.state.name} onChange={this.handleChange}/>
-              <input type='text' name='amount' placeholder='amount' value={this.state.amount} onChange={this.handleChange}/>
-              <input type='submit' />
-            </form>
-          </div>  
-          <div class ='right'>
-            <h2> Today's Market </h2>  
-            <TopTen />
-          </div>
-        </div>    
-      </div>
-    )
+  createOptions = () => {
+    const { dashboard } = this.props
+    const options = dashboard.map( (curr) => {
+      return <option value={curr.currency}>{curr.currency}</option>
+    })
+    return options
   }
+
+  render() {
+      return (
+        <div>
+          <header>
+            <h1> <span className='crypto'>CRYPTO</span><span className='dex'>DEX</span></h1>
+            <button className='logout' onClick= {this.logOut}> Log Out </button>     
+          </header>
+          <div className='body'>
+            <div className= 'left'>
+              <UserPortfolio />
+              <h4> Add a currency you own </h4>
+              <form onSubmit= {this.handleSubmit}>
+                <select name='name' onChange={this.handleChange}>
+                 <option value='samle'>Sample</option>
+                 {this.createOptions()}
+                </select>  
+                <input type='text' name='amount' placeholder='amount' value={this.state.amount} onChange={this.handleChange}/>
+                <input type='submit' />
+              </form>
+            </div>  
+            <div class ='right'>
+              <h2> Today's Market </h2>  
+              <TopTen />
+            </div>
+          </div>    
+        </div>
+      )   
+   }
 }
 
 const mapStateToProps = (state) => ({
