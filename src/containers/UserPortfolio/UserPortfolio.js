@@ -1,22 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './UserPortfolio.css';
-import { calculateValue, calculatePercent } from '../../helper/helper';
+import { calculateValue, calculatePercent, removeMismatches, rejoinMatches, findMismatches } from '../../helper/helper';
 
 class UserPortfolio extends Component {
 
-  updateValues = () => {
-    const { portfolio } = this.props;
-    console.log(portfolio)
-  }
-
-  getPortfolio =  (props) => {
+  getPortfolio = (props) => {
     const { portfolio, dashboard } = this.props;
-    const values =  calculateValue(portfolio, dashboard);
+    const matchedPortfolio = removeMismatches(portfolio, dashboard);
+    const newPortfolio = rejoinMatches(matchedPortfolio, portfolio);
+    const values =  calculateValue(newPortfolio, dashboard);
     const percentages = calculatePercent(values);
-
     if (portfolio) {
-      const port = Object.keys(portfolio).map( (currency, currIndex) => {
+      const port = Object.keys(newPortfolio).map( (currency, currIndex) => {
         return(
           <tr key= {currency}>
             <td> {currency} </td>
@@ -26,9 +22,24 @@ class UserPortfolio extends Component {
           </tr>
         )
       })
-      
-    return port
+      return port
     }
+  }
+
+  getMismatches = (props) => {
+    const { portfolio, dashboard } = this.props;
+    const mismatches = findMismatches(portfolio, dashboard);
+    if (portfolio) {
+      const outliers = Object.keys(mismatches).map( (currency, currIndex) => {
+        return(
+          <tr key ={currency}>
+            <td> {currency} </td>
+            <td> {portfolio[currency]} </td>
+          </tr>  
+        )
+      })
+      return outliers
+    } 
   }
 
   render() {
@@ -45,6 +56,16 @@ class UserPortfolio extends Component {
             </tr>
             {this.getPortfolio()}
           </tbody>  
+        </table>
+        <h4> Your Assets Outside the Top Ten </h4>
+        <table className= 'outliers'>
+          <tbody>
+            <tr>
+              <th> Currency </th>
+              <th> Amount </th>
+            </tr>
+            {this.getMismatches()}
+          </tbody>
         </table>
       </div>
     )

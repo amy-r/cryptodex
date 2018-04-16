@@ -40,6 +40,51 @@ export const createCapPercentage = (dashboard) => {
   return finalCurrency
 }
 
+export const removeMismatches = (portfolio, dashboard) => {
+  if (portfolio && dashboard) {
+    const userCurs = Object.keys(portfolio);
+    const dashboardCurs = dashboard.map( (curr) => {
+      return curr.currency
+    })
+
+    const matchedCurrencyNames = userCurs.filter( (name) => {
+      return dashboardCurs.includes(name) 
+    })
+
+    return matchedCurrencyNames 
+  }
+}
+
+export const findMismatches = (portfolio, dashboard) => {
+  if (portfolio && dashboard) {
+    const userCurs = Object.keys(portfolio);
+    const dashboardCurs = dashboard.map( (curr) => {
+      return curr.currency
+    })
+
+    const mismatchNames = userCurs.filter( (name) => {
+      return !dashboardCurs.includes(name) 
+    })
+
+    const mismatches = mismatchNames.reduce( (obj, mismatch) => {
+      obj[mismatch] = portfolio[mismatch];
+      return obj;
+    }, {}); 
+
+    return mismatches
+  } 
+}
+
+export const rejoinMatches = (matches, portfolio) => {
+  if (matches && portfolio) {
+    const newPortfolio = matches.reduce( (obj, match) => {
+      obj[match] = portfolio[match];
+      return obj
+    }, {})
+    return newPortfolio
+  }  
+}
+
 export const calculateValue = (portfolio, dashboard) => {
   if (portfolio && dashboard) {
     const currencyNames = Object.keys(portfolio);
@@ -47,17 +92,17 @@ export const calculateValue = (portfolio, dashboard) => {
     const values = currencyNames.map( (curr) => {
       const match = dashboard.find((dashCurr) => {
         return dashCurr.currency === curr
-      })
+      });
 
-      const price = match.price
-      const value = price * portfolio[curr]
-      return parseFloat(Math.max(value, 2.8).toFixed(2))
-    })
+      const price = match.price;
+      const value = price * portfolio[curr];
+      return parseFloat(Math.max(value, 2.8).toFixed(2));
+    });
     
-    return values
+    return values;
     
   } else {
-    return []
+    return [];
   }  
 } 
 

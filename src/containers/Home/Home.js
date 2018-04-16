@@ -19,7 +19,7 @@ class Home extends Component {
     }
   }
 
-  componentWillMount = () => {
+  componentDidMount = () => {
     firebase.auth().onAuthStateChanged( (user) => {
       if (user) {
         const displayName = user.displayName;
@@ -39,6 +39,9 @@ class Home extends Component {
     const newCurrency = {...this.state}
     addCurrency(newCurrency);
     writeCurrency(user.uid, newCurrency);
+    this.setState({name: '', amount: ''});
+    getUserData(user.uid).then((portfolio) => this.props.getUserPortfolio(portfolio));
+
   }
 
   handleChange = (event) => {
@@ -54,44 +57,44 @@ class Home extends Component {
   createOptions = () => {
     const { dashboard } = this.props
     const options = dashboard.map( (curr) => {
-      return <option value={curr.currency}>{curr.currency}</option>
+      return <option key={curr.currency} value={curr.currency}> {curr.currency} </option>
     })
     return options
   }
 
   render() {
-      return (
-        <div>
-          <header>
-            <h1> <span className='crypto'>CRYPTO</span><span className='dex'>DEX</span></h1>
-            <button className='logout' onClick= {this.logOut}> Log Out </button>     
-          </header>
-          <div className='body'>
-            <div className= 'left'>
-              <UserPortfolio />
-              <h4> Add a currency you own </h4>
-              <form onSubmit= {this.handleSubmit}>
-                <select name='name' onChange={this.handleChange}>
-                 <option value='samle'>Sample</option>
-                 {this.createOptions()}
-                </select>  
-                <input type='text' name='amount' placeholder='amount' value={this.state.amount} onChange={this.handleChange}/>
-                <input type='submit' />
-              </form>
-            </div>  
-            <div class ='right'>
-              <h2> Today's Market </h2>  
-              <TopTen />
-            </div>
-          </div>    
-        </div>
-      )   
-   }
+    return (
+      <div>
+        <header>
+          <h1> <span className='crypto'>CRYPTO</span><span className='dex'>DEX</span></h1>
+          <button className='logout' onClick= {this.logOut}> Log Out </button>     
+        </header>
+        <div className='body'>
+          <div className= 'left'>
+            <UserPortfolio />
+            <h4> Add a currency you own </h4>
+            <form onSubmit= {this.handleSubmit}>
+              <select name='name' onChange={this.handleChange}>
+               {this.createOptions()}
+              </select>  
+              <input type='text' name='amount' placeholder='amount' value={this.state.amount} onChange={this.handleChange}/>
+              <input type='submit' />
+            </form>
+          </div>  
+          <div className='right'>
+            <h2> Today's Market </h2>  
+            <TopTen />
+          </div>
+        </div>    
+      </div>
+    )   
+  }
 }
 
 const mapStateToProps = (state) => ({
   dashboard: state.dashboard,
-  user: state.user
+  user: state.user,
+  portfolio: state.portfolio
 })
 
 const mapDispatchToProps = (dispatch) => ({
