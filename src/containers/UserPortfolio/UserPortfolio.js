@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './UserPortfolio.css';
-import { calculateValue } from '../../helper/helper';
+import { calculateValue, calculatePercent } from '../../helper/helper';
 import { updateValue } from '../../helper/firebaseFunctions';
 
 class UserPortfolio extends Component {
@@ -25,18 +25,19 @@ class UserPortfolio extends Component {
 
   getPortfolio = (props) => {
     const {portfolio, dashboard} = this.props;
-    
-    const values =  calculateValue(portfolio, dashboard)
+    const values =  calculateValue(portfolio, dashboard);
+    const percentages = calculatePercent(values)
+
     return Object.keys(portfolio).map( (currency, currIndex) => {
       return(
         <tr>
           <td> {currency} </td>
           <td> {portfolio[currency]} </td>
           <td> {values[currIndex]} </td>
+          <td> {percentages[currIndex]} </td>
         </tr>
       )
     })
-
   }
 
   render() {
@@ -47,6 +48,7 @@ class UserPortfolio extends Component {
             <th> Currency </th>
             <th> Amount </th>
             <th> Value </th>
+            <th> percentage </th>
             {this.getPortfolio()}
         </table>
       </div>

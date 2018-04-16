@@ -42,17 +42,29 @@ export const createCapPercentage = (dashboard) => {
 
 export const calculateValue = (portfolio, dashboard) => {
   const currencyNames = Object.keys(portfolio);
+
   const values = currencyNames.map( (curr) => {
-    return dashboard.map( (topTen) => {
-      if (topTen.currency === curr) {
-        const price = topTen.price;
-        const value = price * portfolio[curr];
-        console.log(value)
-        return value
-      }
+    const match = dashboard.find((dashCurr) => {
+      return dashCurr.currency === curr
     })
+
+    const price = match.price
+    const value = price * portfolio[curr]
+    return parseFloat(Math.max(value, 2.8).toFixed(2))
   })
+  
   return values
 } 
 
-// need calculate values to take in a currency name, 
+export const calculatePercent = (values) => {
+
+  const total = values.reduce( (a, b) => a+b, 0)
+
+  const totalsArr = values.map( (curr) => {
+    const percentage = (curr/total) * 100;
+    const rounded = parseFloat(percentage.toFixed(2));
+    return rounded
+  })
+
+  return totalsArr
+}
