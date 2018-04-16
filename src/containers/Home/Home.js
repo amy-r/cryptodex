@@ -75,7 +75,6 @@ class Home extends Component {
             <h4> Add a currency you own </h4>
             <form onSubmit= {this.handleSubmit}>
               <select name='name' onChange={this.handleChange}>
-               <option value='samle'>Sample</option>
                {this.createOptions()}
               </select>  
               <input type='text' name='amount' placeholder='amount' value={this.state.amount} onChange={this.handleChange}/>

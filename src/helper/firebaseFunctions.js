@@ -1,6 +1,5 @@
 import * as firebase from 'firebase';
 import { config } from '../firebase/firebase';
-// import { calculateValue } from '../helper/helper';
 export const firebaseApp = firebase.initializeApp(config);
 
 
@@ -25,12 +24,3 @@ export const getUserData = async (userId) => {
   }  
 }
 
-// export const updateValue = (user, curr, dashboard) => {
-//   try {
-//     firebaseApp.database().ref(user + curr.name).update({
-//       value: calculateValue(curr.amount, dashboard)
-//     })
-//   } catch (err) {
-//     throw new Error('could not update value')
-//   }
-// }
