@@ -1,17 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Route, NavLink, Link, withRouter } from 'react-router-dom'
-import Navigation from '../../components/Navigation';
+import { Route, withRouter } from 'react-router-dom'
 import LandingPage from '../../components/Landing';
 import HomePage from '../Home/Home';
+import LoadingPage from '../Loading/Loading'
 import { fetchApi } from '../../apiCalls/apiCalls.js';
 import { connect } from 'react-redux';
 import { addDashboard } from '../../actions/addDashboard';
-import TopTen from '../TopTen/TopTen';
 import * as helper from '../../helper/helper';
-import * as firebase from 'firebase';
-import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
-import { uiConfig, config } from '../../firebase/firebase';
 
 class App extends Component {
 
@@ -30,7 +26,7 @@ class App extends Component {
     <div>
       <Route exact path='/' component={LandingPage} />
       <Route exact path='/home' component={HomePage} /> 
-      <TopTen />
+      <Route exact path='/loading' component={LoadingPage} />
       <div className='content-container'/>
       <div className='blur' />
     </div>

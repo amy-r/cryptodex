@@ -16,3 +16,26 @@ form {
   position: relative;
   z-index: 12;
 }
+
+.body {
+  display: flex;
+  justify-content: space-around;  
+}
+
+h2 {
+  position: relative;
+  z-index: 10;
+  color: white;
+  font-weight: 300;
+}
+
+h4 {
+  position: relative;
+  z-index: 10;
+  color: white;
+  font-weight: 300;
+}
+
+header {
+  margin-bottom: 10%;
+}

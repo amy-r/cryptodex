@@ -16,8 +16,8 @@ export const trimData = (dashboard) => {
   return dashboard.map( (curr) => {
     return {
       'currency': curr.currency, 
-      'marketCap': curr.marketCap
-      
+      'marketCap': curr.marketCap,
+      'price': curr.close
     }
   })
 }
@@ -38,4 +38,37 @@ export const createCapPercentage = (dashboard) => {
     return currency
   })
   return finalCurrency
+}
+
+export const calculateValue = (portfolio, dashboard) => {
+  if (portfolio && dashboard) {
+    const currencyNames = Object.keys(portfolio);
+
+    const values = currencyNames.map( (curr) => {
+      const match = dashboard.find((dashCurr) => {
+        return dashCurr.currency === curr
+      })
+
+      const price = match.price
+      const value = price * portfolio[curr]
+      return parseFloat(Math.max(value, 2.8).toFixed(2))
+    })
+    
+    return values
+    
+  } else {
+    return []
+  }  
+} 
+
+export const calculatePercent = (values) => {   
+    const total = values.reduce( (a, b) => a+b, 0)
+
+    const totalsArr = values.map( (curr) => {
+      const percentage = (curr/total) * 100;
+      const rounded = parseFloat(percentage.toFixed(2));
+      return rounded
+    })
+
+    return totalsArr
 }
