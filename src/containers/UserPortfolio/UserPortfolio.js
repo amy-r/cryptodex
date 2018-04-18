@@ -47,28 +47,28 @@ export class UserPortfolio extends Component {
   render() {
     return (
       <div>
-        <h2> Your Portfolio </h2>
+        <h2> Your Portfolio Today</h2>
         <table className= 'user-portfolio'>
           <tbody>
             <tr>
               <th> Currency </th>
               <th> Amount </th>
-              <th> Value </th>
+              <th> Value (USD) </th>
               <th> Percentage </th>
             </tr>
             {this.getPortfolio()}
           </tbody>  
         </table>
-        <h4> Your Assets Outside the Top Ten </h4>
-        <table className= 'outliers'>
-          <tbody>
-            <tr>
-              <th> Currency </th>
-              <th> Amount </th>
-            </tr>
-            {this.getMismatches()}
-          </tbody>
-        </table>
+          <h4> Your Assets Outside the Top Ten </h4>
+          <table className= 'outliers'>
+            <tbody>
+              <tr>
+                <th> Currency </th>
+                <th> Amount </th>
+              </tr>
+              {this.getMismatches()}
+            </tbody>
+          </table>   
       </div>
     );
   }

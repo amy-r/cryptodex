@@ -21,6 +21,7 @@ class Landing extends Component {
           uiConfig={uiConfig} 
           firebaseAuth={firebase.auth()} 
         /> 
+        <h2> Today's Market </h2>
         <TopTen />
       </div>
     );

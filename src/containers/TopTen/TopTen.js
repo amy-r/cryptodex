@@ -19,7 +19,7 @@ export const TopTen = (props) => {
     <div className='TopTen'>
       <table>
         <tbody>
-          <tr>
+          <tr className='table-head'>
             <td> Currency </td>
             <td> Market Cap </td>
             <td> % </td>

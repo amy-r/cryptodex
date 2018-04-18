@@ -6,7 +6,8 @@ import Landing from './Landing';
 import * as firebase from 'firebase';
 
 describe('Landing', () => {
-  it.skip('should match snapshot', () => {
+  it('should match snapshot', () => {
+    firebase.auth = jest.fn();
     const wrapper = shallow(<Landing />, {disableLifecycleMethods:true})
     expect(wrapper).toMatchSnapshot();
   })

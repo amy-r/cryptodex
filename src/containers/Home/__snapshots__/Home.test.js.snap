@@ -83,8 +83,10 @@ ShallowWrapper {
                     className="left"
           >
                     <Connect(UserPortfolio) />
-                    <h4>
-                               Add a currency you own 
+                    <h4
+                              className="add"
+                    >
+                               Add a top ten currency you own 
                     </h4>
                     <form
                               onSubmit={[Function]}
@@ -237,8 +239,10 @@ ShallowWrapper {
               className="left"
 >
               <Connect(UserPortfolio) />
-              <h4>
-                             Add a currency you own 
+              <h4
+                            className="add"
+              >
+                             Add a top ten currency you own 
               </h4>
               <form
                             onSubmit={[Function]}
@@ -297,8 +301,10 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <Connect(UserPortfolio) />,
-                <h4>
-                   Add a currency you own 
+                <h4
+                  className="add"
+>
+                   Add a top ten currency you own 
 </h4>,
                 <form
                   onSubmit={[Function]}
@@ -353,10 +359,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": " Add a currency you own ",
+                  "children": " Add a top ten currency you own ",
+                  "className": "add",
                 },
                 "ref": null,
-                "rendered": " Add a currency you own ",
+                "rendered": " Add a top ten currency you own ",
                 "type": "h4",
               },
               Object {
@@ -586,8 +593,10 @@ ShallowWrapper {
                         className="left"
             >
                         <Connect(UserPortfolio) />
-                        <h4>
-                                     Add a currency you own 
+                        <h4
+                                    className="add"
+                        >
+                                     Add a top ten currency you own 
                         </h4>
                         <form
                                     onSubmit={[Function]}
@@ -740,8 +749,10 @@ ShallowWrapper {
                 className="left"
 >
                 <Connect(UserPortfolio) />
-                <h4>
-                                 Add a currency you own 
+                <h4
+                                className="add"
+                >
+                                 Add a top ten currency you own 
                 </h4>
                 <form
                                 onSubmit={[Function]}
@@ -800,8 +811,10 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <Connect(UserPortfolio) />,
-                  <h4>
-                     Add a currency you own 
+                  <h4
+                    className="add"
+>
+                     Add a top ten currency you own 
 </h4>,
                   <form
                     onSubmit={[Function]}
@@ -856,10 +869,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": " Add a currency you own ",
+                    "children": " Add a top ten currency you own ",
+                    "className": "add",
                   },
                   "ref": null,
-                  "rendered": " Add a currency you own ",
+                  "rendered": " Add a top ten currency you own ",
                   "type": "h4",
                 },
                 Object {

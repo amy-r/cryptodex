@@ -1,16 +1,35 @@
 .user-portfolio {
   position: relative;
   z-index: 10;
-  /*font-size: 50px;*/
   background-color: white;
-}
-
-h1 {
-  color: red;
+  border-radius: 10px;
 }
 
 .outliers {
   position: relative;
   z-index: 10;
   background-color: white;
+  border-radius: 10px;
+}
+
+td {
+  font-weight: 300;
+  padding: 2% 10%;
+  margin: 2%;
+}
+
+th {
+  font-weight: 300;
+  padding: 2% 3%;
+  margin: 5%;
+  border-bottom: 1px solid black;
+}
+
+tbody {
+  margin: 5%;
+}
+
+.outliers th {
+  margin: 5%;
+  padding: 5%;
 }

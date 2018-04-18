@@ -1,7 +1,21 @@
 .TopTen {
   background-color: white;
+  opacity: 0.4;
   z-index: 10;
   position: relative;
   border-radius: 10px;
+  margin: auto;
+  width: max-content;
+}
+
+.table-head {
+  border-bottom: 1px solid black;
+}
+
+td {
+  margin: 10%;
+}
+
+tbody {
   margin: auto;
 }

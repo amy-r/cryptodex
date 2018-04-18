@@ -1,0 +1,308 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Landing should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Landing />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1>
+          <span
+                    className="crypto"
+          >
+                    CRYPTO
+          </span>
+          <span
+                    className="dex"
+          >
+                    DEX
+          </span>
+</h1>,
+        <p>
+          An open-source indexing app for the cryptocurrency market
+</p>,
+        <e
+          firebaseAuth={undefined}
+          uiConfig={
+                    Object {
+                              "signInFlow": "popup",
+                              "signInOptions": Array [
+                                "google.com",
+                              ],
+                              "signInSuccessUrl": "/home",
+                            }
+          }
+/>,
+        <h2>
+           Today's Market 
+</h2>,
+        <Connect(Component) />,
+      ],
+      "className": "landing",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <span
+              className="crypto"
+>
+              CRYPTO
+</span>,
+            <span
+              className="dex"
+>
+              DEX
+</span>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "CRYPTO",
+              "className": "crypto",
+            },
+            "ref": null,
+            "rendered": "CRYPTO",
+            "type": "span",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "DEX",
+              "className": "dex",
+            },
+            "ref": null,
+            "rendered": "DEX",
+            "type": "span",
+          },
+        ],
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "An open-source indexing app for the cryptocurrency market",
+        },
+        "ref": null,
+        "rendered": "An open-source indexing app for the cryptocurrency market",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "firebaseAuth": undefined,
+          "uiConfig": Object {
+            "signInFlow": "popup",
+            "signInOptions": Array [
+              "google.com",
+            ],
+            "signInSuccessUrl": "/home",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": " Today's Market ",
+        },
+        "ref": null,
+        "rendered": " Today's Market ",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+            <span
+                        className="crypto"
+            >
+                        CRYPTO
+            </span>
+            <span
+                        className="dex"
+            >
+                        DEX
+            </span>
+</h1>,
+          <p>
+            An open-source indexing app for the cryptocurrency market
+</p>,
+          <e
+            firebaseAuth={undefined}
+            uiConfig={
+                        Object {
+                                    "signInFlow": "popup",
+                                    "signInOptions": Array [
+                                      "google.com",
+                                    ],
+                                    "signInSuccessUrl": "/home",
+                                  }
+            }
+/>,
+          <h2>
+             Today's Market 
+</h2>,
+          <Connect(Component) />,
+        ],
+        "className": "landing",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <span
+                className="crypto"
+>
+                CRYPTO
+</span>,
+              <span
+                className="dex"
+>
+                DEX
+</span>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "CRYPTO",
+                "className": "crypto",
+              },
+              "ref": null,
+              "rendered": "CRYPTO",
+              "type": "span",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "DEX",
+                "className": "dex",
+              },
+              "ref": null,
+              "rendered": "DEX",
+              "type": "span",
+            },
+          ],
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "An open-source indexing app for the cryptocurrency market",
+          },
+          "ref": null,
+          "rendered": "An open-source indexing app for the cryptocurrency market",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "firebaseAuth": undefined,
+            "uiConfig": Object {
+              "signInFlow": "popup",
+              "signInOptions": Array [
+                "google.com",
+              ],
+              "signInSuccessUrl": "/home",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": " Today's Market ",
+          },
+          "ref": null,
+          "rendered": " Today's Market ",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "disableLifecycleMethods": true,
+  },
+}
+`;

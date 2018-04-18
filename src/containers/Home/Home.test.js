@@ -8,7 +8,8 @@ import * as helper from '../../helper/helper';
 import {mockDashboard} from '../../helper/mockDashboard'; 
 import { writeCurrency, getUserData } from '../../helper/firebaseFunctions.js';
 
-jest.mock('../../helper/firebaseFunctions')
+jest.mock('../../helper/firebaseFunctions');
+
 describe('Home', () => {
   let mockUser;
   let mockPortfolio;
@@ -36,17 +37,49 @@ describe('Home', () => {
     expect(wrapper.props().getUserPortfolio).toHaveBeenCalled;
   })
 
-  it.skip('calls addCurrency on handleSubmit', async () => {
+  it('calls addCurrency on handleSubmit', async () => {
     const mockEvent = {preventDefault: jest.fn()}
     wrapper.instance().handleSubmit(mockEvent)
     expect(wrapper.props().addCurrency).toHaveBeenCalled 
   })
 
+  it('calls writeCurrency on handleSubmit', async () => {
+    const mockEvent = {preventDefault: jest.fn()}
+    wrapper.instance().handleSubmit(mockEvent)
+    expect(wrapper.props().writeCurrency).toHaveBeenCalled     
+  })
+
+  it('resets state to empty strings on handleSubmit', async () => {
+    const mockEvent = {preventDefault: jest.fn()}    
+    expect(wrapper.state().name).toEqual('BTC');
+    wrapper.instance().handleSubmit(mockEvent)
+    expect(wrapper.state().name).toEqual('')    
+  })
+
+  it('calls getUserData on handleSubmit', () => {
+    const mockEvent = {preventDefault: jest.fn()}
+    wrapper.instance().handleSubmit(mockEvent)
+    expect(getUserData).toHaveBeenCalled    
+  })
+
+  it('calls getUserPortfolio on handleSubmit', () => {
+    const mockEvent = {preventDefault: jest.fn()}
+    wrapper.instance().handleSubmit(mockEvent)
+    expect(wrapper.props.getUserPortfolio).toHaveBeenCalled    
+  })
+
   it('sets state on handleChange', () => {
     const mockEvent = { target: { name: 'name', value: 'ETH' }}
     expect(wrapper.state().name).toEqual('BTC')
-    wrapper.instance().handleChange(mockEvent);
-    expect(wrapper.state().name).toEqual('ETH')
+
+    new Promise((resolve) => {
+      resolve(wrapper.instance().handleChange(mockEvent))
+    }).then( () => {
+      wrapper.update()
+    }).then( () => {
+    expect(wrapper.state().name).toEqual('ETH');
+      
+    })
   })
 })
 
