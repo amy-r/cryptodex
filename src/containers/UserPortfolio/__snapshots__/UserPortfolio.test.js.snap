@@ -29,9 +29,9 @@ ShallowWrapper {
     }
     portfolio={
         Object {
-            "BTC": 1,
-            "ETH": 1,
-            "FAKECOIN": 1,
+            "BTC": "1",
+            "ETH": "1",
+            "FAKECOIN": "1",
           }
     }
 />,
@@ -422,14 +422,14 @@ ShallowWrapper {
                   "props": Object {
                     "children": Array [
                       " ",
-                      1,
+                      "1",
                       " ",
                     ],
                   },
                   "ref": null,
                   "rendered": Array [
                     " ",
-                    1,
+                    "1",
                     " ",
                   ],
                   "type": "td",
@@ -531,14 +531,14 @@ ShallowWrapper {
                   "props": Object {
                     "children": Array [
                       " ",
-                      1,
+                      "1",
                       " ",
                     ],
                   },
                   "ref": null,
                   "rendered": Array [
                     " ",
-                    1,
+                    "1",
                     " ",
                   ],
                   "type": "td",
@@ -749,14 +749,14 @@ ShallowWrapper {
                   "props": Object {
                     "children": Array [
                       " ",
-                      1,
+                      "1",
                       " ",
                     ],
                   },
                   "ref": null,
                   "rendered": Array [
                     " ",
-                    1,
+                    "1",
                     " ",
                   ],
                   "type": "td",
@@ -1153,14 +1153,14 @@ ShallowWrapper {
                     "props": Object {
                       "children": Array [
                         " ",
-                        1,
+                        "1",
                         " ",
                       ],
                     },
                     "ref": null,
                     "rendered": Array [
                       " ",
-                      1,
+                      "1",
                       " ",
                     ],
                     "type": "td",
@@ -1262,14 +1262,14 @@ ShallowWrapper {
                     "props": Object {
                       "children": Array [
                         " ",
-                        1,
+                        "1",
                         " ",
                       ],
                     },
                     "ref": null,
                     "rendered": Array [
                       " ",
-                      1,
+                      "1",
                       " ",
                     ],
                     "type": "td",
@@ -1480,14 +1480,14 @@ ShallowWrapper {
                     "props": Object {
                       "children": Array [
                         " ",
-                        1,
+                        "1",
                         " ",
                       ],
                     },
                     "ref": null,
                     "rendered": Array [
                       " ",
-                      1,
+                      "1",
                       " ",
                     ],
                     "type": "td",

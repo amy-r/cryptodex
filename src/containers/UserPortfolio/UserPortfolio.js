@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './UserPortfolio.css';
-import { calculateValue, calculatePercent, removeMismatches, findMismatches } from '../../helper/helper';
+import { calculateValue, calculatePercent, 
+  removeMismatches, findMismatches } from '../../helper/helper';
+import PropTypes from 'prop-types';
 
 export class UserPortfolio extends Component {
 
-  getPortfolio = (props) => {
+  getPortfolio = () => {
     const { portfolio, dashboard } = this.props;
     const matchedPortfolio = removeMismatches(portfolio, dashboard);
     const values =  calculateValue(matchedPortfolio, dashboard);
@@ -13,32 +15,32 @@ export class UserPortfolio extends Component {
 
     if (portfolio) {
       const port = Object.keys(matchedPortfolio).map( (currency, currIndex) => {
-        return(
+        return (
           <tr key= {currency}>
             <td> {currency} </td>
             <td> {portfolio[currency]} </td>
             <td> {values[currIndex]} </td>
             <td> {percentages[currIndex]} </td>
           </tr>
-        )
-      })
-      return port
+        );
+      });
+      return port;
     }
   }
 
-  getMismatches = (props) => {
+  getMismatches = () => {
     const { portfolio, dashboard } = this.props;
     const mismatches = findMismatches(portfolio, dashboard);
     if (portfolio) {
-      const outliers = Object.keys(mismatches).map( (currency, currIndex) => {
-        return(
+      const outliers = Object.keys(mismatches).map( (currency) => {
+        return (
           <tr key ={currency}>
             <td> {currency} </td>
             <td> {portfolio[currency]} </td>
           </tr>  
-        )
-      })
-      return outliers
+        );
+      });
+      return outliers;
     } 
   }
 
@@ -68,7 +70,7 @@ export class UserPortfolio extends Component {
           </tbody>
         </table>
       </div>
-    )
+    );
   }
 }
 
@@ -76,6 +78,16 @@ export const mapStateToProps = (state) => ({
   portfolio: state.portfolio,
   dashboard: state.dashboard,
   user: state.user
-})
+});
 
-export default connect(mapStateToProps)(UserPortfolio)
+UserPortfolio.propTypes = {
+  portfolio: PropTypes.objectOf(PropTypes.string),
+  dashboard: PropTypes.arrayOf(PropTypes.objectOf(
+    PropTypes.oneOfType([PropTypes.string, PropTypes.number]))),
+  user: PropTypes.shape({
+    displayName: PropTypes.string,
+    uid: PropTypes.string
+  })
+};
+
+export default connect(mapStateToProps)(UserPortfolio);

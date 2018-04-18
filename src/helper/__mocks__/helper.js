@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import {mockDashboard} from '../../helper/mockDashboard';
 
 export const createMarketCap = jest.fn().mockImplementation( () => {

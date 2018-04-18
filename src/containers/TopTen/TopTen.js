@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import './TopTen.css';
+import PropTypes from 'prop-types';
 
 export const TopTen = (props) => {
 
@@ -11,8 +12,8 @@ export const TopTen = (props) => {
         <td> {curr.marketCap} </td>
         <td> {curr.percentage} </td>
       </tr>      
-    )
-  })
+    );
+  });
 
   return (
     <div className='TopTen'>
@@ -23,16 +24,23 @@ export const TopTen = (props) => {
             <td> Market Cap </td>
             <td> % </td>
           </tr>
-        {tableData}
+          {tableData}
         </tbody>
       </table>
     </div>
-  )
-}
+  );
+};
 
 export const mapStateToProps = (state) => ({
   dashboard: state.dashboard
-})
+});
 
-export default connect(mapStateToProps, null)(TopTen)
+TopTen.propTypes = {
+  dashboard: PropTypes.arrayOf(
+    PropTypes.objectOf(PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number])))
+};
+
+export default connect(mapStateToProps, null)(TopTen);
 
