@@ -63,38 +63,31 @@ describe('Home', () => {
   })
 
   it('calls getUserPortfolio on handleSubmit', () => {
-    const mockEvent = {preventDefault: jest.fn()}
-    wrapper.instance().handleSubmit(mockEvent)
+    const mockEvent = {preventDefault: jest.fn()};
+    wrapper.instance().handleSubmit(mockEvent);
     expect(wrapper.props.getUserPortfolio).toHaveBeenCalled    
   })
 
   it('sets state on handleChange', () => {
-    const mockEvent = { target: { name: 'name', value: 'ETH' }}
-    expect(wrapper.state().name).toEqual('BTC')
-
-    new Promise((resolve) => {
-      resolve(wrapper.instance().handleChange(mockEvent))
-    }).then( () => {
-      wrapper.update()
-    }).then( () => {
+    const mockEvent = { target: { name: 'name', value: 'ETH' }};
+    expect(wrapper.state().name).toEqual('BTC');
+    wrapper.instance().handleChange(mockEvent);
     expect(wrapper.state().name).toEqual('ETH');
-      
-    })
   })
 })
 
 describe('MSTP and MDTP', () => {
   it('should define dashboard props for the container', () => {
-    const mockStore = { dashboard: mockDashboard }
-    const mapped = mapStateToProps(mockStore)
-    expect(mapped.dashboard).toEqual(mockDashboard)
+    const mockStore = { dashboard: mockDashboard };
+    const mapped = mapStateToProps(mockStore);
+    expect(mapped.dashboard).toEqual(mockDashboard);
   })
 
   it('should define user props for the container', () => {
-    const mockUser = 1
-    const mockStore = {user: mockUser}
-    const mapped = mapStateToProps(mockStore)
-    expect(mapped.user).toEqual(mockUser)
+    const mockUser = 1;
+    const mockStore = {user: mockUser};
+    const mapped = mapStateToProps(mockStore);
+    expect(mapped.user).toEqual(mockUser);
   })
 
   it('should define portfolio props for the container', () => {
