@@ -15,8 +15,8 @@ describe('Home', () => {
   let wrapper;
 
   beforeEach( () => {
-    mockUser = 1;
-    mockPortfolio = {BTC: 1, ETH: 1}
+    mockUser = { displayName: 'Oprah', uid: '1'}
+    mockPortfolio = {BTC: '1', ETH: '1'}
     wrapper = shallow(<Home dashboard={mockDashboard} user={mockUser} portfolio={mockPortfolio} history={[]} getUserPortfolio={jest.fn()} addCurrency={jest.fn()}  />, {disableLifecycleMethods: true})
   })
 

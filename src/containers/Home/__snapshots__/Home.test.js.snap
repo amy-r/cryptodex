@@ -32,11 +32,16 @@ ShallowWrapper {
     history={Array []}
     portfolio={
         Object {
-            "BTC": 1,
-            "ETH": 1,
+            "BTC": "1",
+            "ETH": "1",
           }
     }
-    user={1}
+    user={
+        Object {
+            "displayName": "Oprah",
+            "uid": "1",
+          }
+    }
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import * as firebase from 'firebase';
 import { addCurrency } from '../../actions/addCurrency';
 import { addUser } from '../../actions/addUser';
+import { removeUser } from '../../actions/removeUser';
 import { getUserPortfolio } from '../../actions/getUserPortfolio';
 import { withRouter } from 'react-router-dom';
 import { writeCurrency, getUserData } from '../../helper/firebaseFunctions.js';
@@ -51,6 +52,7 @@ export class Home extends Component {
 
   logOut = () => {
     firebase.auth().signOut();
+    this.props.logOut();
     this.props.history.push('/');
   }
 
@@ -100,6 +102,7 @@ export const mapStateToProps = (state) => ({
 export const mapDispatchToProps = (dispatch) => ({
   addCurrency: (currency) => dispatch(addCurrency(currency)),
   logIn: (user) => dispatch(addUser(user)),
+  logOut: () => dispatch(removeUser()),
   getUserPortfolio: (portfolio) => dispatch(getUserPortfolio(portfolio))
 });
 

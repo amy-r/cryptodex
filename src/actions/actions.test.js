@@ -1,7 +1,8 @@
 import { addCurrency } from './addCurrency';
 import { addDashboard } from './addDashboard';
 import { addUser } from './addUser';
-import { getUserPortfolio } from './getUserPortfolio'
+import { getUserPortfolio } from './getUserPortfolio';
+import { removeUser } from './removeUser';
 
 describe('actions', () => {
 
@@ -27,5 +28,10 @@ describe('actions', () => {
     const mockPortfolio = {BTC: 1}
     const expected = {type: 'GET_USER_PORTFOLIO', portfolio: mockPortfolio}
     expect(getUserPortfolio(mockPortfolio)).toEqual(expected)
+  })
+
+  it('should create a type of REMOVE_USER', () => {
+    const expected={type: 'REMOVE_USER'}
+    expect(removeUser()).toEqual(expected)
   })    
 })
