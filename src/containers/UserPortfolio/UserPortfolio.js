@@ -47,13 +47,13 @@ export class UserPortfolio extends Component {
   render() {
     return (
       <div>
-        <h2> Your Portfolio </h2>
+        <h2> Your Portfolio Today</h2>
         <table className= 'user-portfolio'>
           <tbody>
             <tr>
               <th> Currency </th>
               <th> Amount </th>
-              <th> Value </th>
+              <th> Value (USD) </th>
               <th> Percentage </th>
             </tr>
             {this.getPortfolio()}
@@ -68,7 +68,7 @@ export class UserPortfolio extends Component {
             </tr>
             {this.getMismatches()}
           </tbody>
-        </table>
+        </table>   
       </div>
     );
   }

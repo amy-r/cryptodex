@@ -42,7 +42,9 @@ ShallowWrapper {
     "props": Object {
       "children": <table>
         <tbody>
-                <tr>
+                <tr
+                        className="table-head"
+                >
                         <td>
                                  Currency 
                         </td>
@@ -112,7 +114,9 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <tbody>
-          <tr>
+          <tr
+                    className="table-head"
+          >
                     <td>
                                Currency 
                     </td>
@@ -180,7 +184,9 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <tr>
+            <tr
+              className="table-head"
+>
               <td>
                              Currency 
               </td>
@@ -261,6 +267,7 @@ ShallowWrapper {
                    % 
 </td>,
               ],
+              "className": "table-head",
             },
             "ref": null,
             "rendered": Array [
@@ -567,7 +574,9 @@ ShallowWrapper {
       "props": Object {
         "children": <table>
           <tbody>
-                    <tr>
+                    <tr
+                              className="table-head"
+                    >
                               <td>
                                          Currency 
                               </td>
@@ -637,7 +646,9 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <tbody>
-            <tr>
+            <tr
+                        className="table-head"
+            >
                         <td>
                                      Currency 
                         </td>
@@ -705,7 +716,9 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <tr>
+              <tr
+                className="table-head"
+>
                 <td>
                                  Currency 
                 </td>
@@ -786,6 +799,7 @@ ShallowWrapper {
                      % 
 </td>,
                 ],
+                "className": "table-head",
               },
               "ref": null,
               "rendered": Array [

@@ -3,13 +3,18 @@ h1 {
   position: relative;
   z-index: 10;
   display: inline;
+  font-size: 3em;
+  margin-left: 5%;
 }
 
 .logout {
-  float: right;
-  position: relative;
+  /*position: absolute;*/
   z-index: 11;
   display: inline;
+  margin-right: 5%;
+  background: none;
+  font-size: 1em;
+  border: none;
 }
 
 form {
@@ -19,6 +24,7 @@ form {
 
 .body {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;  
 }
 
@@ -37,5 +43,26 @@ h4 {
 }
 
 header {
-  margin-bottom: 10%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+select {
+  background-color: #F5A623;
+  padding: 2% 5%;
+  font-size: 1em;
+  color: white;
+}
+
+input {
+  font-size: 1em;
+  margin: 0 2%;
+}
+
+.add {
+  margin-top: 10%;
 }

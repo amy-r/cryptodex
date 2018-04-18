@@ -49,7 +49,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <h2>
-           Your Portfolio 
+           Your Portfolio Today
 </h2>,
         <table
           className="user-portfolio"
@@ -63,7 +63,7 @@ ShallowWrapper {
                                          Amount 
                               </th>
                               <th>
-                                         Value 
+                                         Value (USD) 
                               </th>
                               <th>
                                          Percentage 
@@ -153,10 +153,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": " Your Portfolio ",
+          "children": " Your Portfolio Today",
         },
         "ref": null,
-        "rendered": " Your Portfolio ",
+        "rendered": " Your Portfolio Today",
         "type": "h2",
       },
       Object {
@@ -173,7 +173,7 @@ ShallowWrapper {
                                      Amount 
                         </th>
                         <th>
-                                     Value 
+                                     Value (USD) 
                         </th>
                         <th>
                                      Percentage 
@@ -241,7 +241,7 @@ ShallowWrapper {
                                  Amount 
                 </th>
                 <th>
-                                 Value 
+                                 Value (USD) 
                 </th>
                 <th>
                                  Percentage 
@@ -310,7 +310,7 @@ ShallowWrapper {
                      Amount 
 </th>,
                   <th>
-                     Value 
+                     Value (USD) 
 </th>,
                   <th>
                      Percentage 
@@ -346,10 +346,10 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": " Value ",
+                    "children": " Value (USD) ",
                   },
                   "ref": null,
-                  "rendered": " Value ",
+                  "rendered": " Value (USD) ",
                   "type": "th",
                 },
                 Object {
@@ -780,7 +780,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <h2>
-             Your Portfolio 
+             Your Portfolio Today
 </h2>,
           <table
             className="user-portfolio"
@@ -794,7 +794,7 @@ ShallowWrapper {
                                                  Amount 
                                     </th>
                                     <th>
-                                                 Value 
+                                                 Value (USD) 
                                     </th>
                                     <th>
                                                  Percentage 
@@ -884,10 +884,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": " Your Portfolio ",
+            "children": " Your Portfolio Today",
           },
           "ref": null,
-          "rendered": " Your Portfolio ",
+          "rendered": " Your Portfolio Today",
           "type": "h2",
         },
         Object {
@@ -904,7 +904,7 @@ ShallowWrapper {
                                            Amount 
                             </th>
                             <th>
-                                           Value 
+                                           Value (USD) 
                             </th>
                             <th>
                                            Percentage 
@@ -972,7 +972,7 @@ ShallowWrapper {
                                      Amount 
                   </th>
                   <th>
-                                     Value 
+                                     Value (USD) 
                   </th>
                   <th>
                                      Percentage 
@@ -1041,7 +1041,7 @@ ShallowWrapper {
                        Amount 
 </th>,
                     <th>
-                       Value 
+                       Value (USD) 
 </th>,
                     <th>
                        Percentage 
@@ -1077,10 +1077,10 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": " Value ",
+                      "children": " Value (USD) ",
                     },
                     "ref": null,
-                    "rendered": " Value ",
+                    "rendered": " Value (USD) ",
                     "type": "th",
                   },
                   Object {

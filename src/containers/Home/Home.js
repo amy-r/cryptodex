@@ -36,15 +36,15 @@ export class Home extends Component {
     });
   }
 
-  handleSubmit = (event) => {
+  handleSubmit = async (event) => {
     const { addCurrency, user } = this.props;
     event.preventDefault();
     const newCurrency = {...this.state};
     addCurrency(newCurrency);
     writeCurrency(user.uid, newCurrency);
     this.setState({name: '', amount: ''});
-    getUserData(user.uid).then(
-      (portfolio) => this.props.getUserPortfolio(portfolio));
+    const portfolio = await getUserData(user.uid);
+    this.props.getUserPortfolio(portfolio);
   }
 
   handleChange = (event) => {
@@ -84,7 +84,7 @@ export class Home extends Component {
         <div className='body'>
           <div className= 'left'>
             <UserPortfolio />
-            <h4> Add a currency you own </h4>
+            <h4 className='add'> Add a top ten currency you own </h4>
             <form onSubmit= {this.handleSubmit}>
               <select name='name' onChange={this.handleChange}>
                 {this.createOptions()}

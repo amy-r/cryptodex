@@ -1,7 +1,28 @@
 .TopTen {
-  background-color: white;
-  z-index: 10;
+  background: none;
+  z-index: 100;
   position: relative;
+  border: 3px solid white;
   border-radius: 10px;
   margin: auto;
+  width: max-content;
+  color: white;
+}
+
+.table-head {
+  font-weight: 700;
+}
+
+td {
+  margin: 10%;
+}
+
+tbody {
+  margin: auto;
+}
+
+@media screen and (max-width: 967px) {
+  .TopTen {
+    width: min-content;
+  }
 }
