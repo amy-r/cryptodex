@@ -20,3 +20,9 @@ td {
 tbody {
   margin: auto;
 }
+
+@media screen and (max-width: 967px) {
+  .TopTen {
+    width: min-content;
+  }
+}
