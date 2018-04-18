@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Route, withRouter } from 'react-router-dom'
-import LandingPage from '../../components/Landing';
+import LandingPage from '../../components/Landing/Landing';
 import HomePage from '../Home/Home';
 import { fetchApi } from '../../apiCalls/apiCalls.js';
 import { connect } from 'react-redux';

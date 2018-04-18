@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './Landing.css';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
-import { uiConfig } from '../firebase/firebase';
+import { uiConfig } from '../../firebase/firebase';
 import * as firebase from 'firebase';
-import TopTen from '../containers/TopTen/TopTen';
+import TopTen from '../../containers/TopTen/TopTen';
 
 class Landing extends Component {
 
