@@ -32,7 +32,7 @@ export class App extends Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   addDashboard: (dashboard) => dispatch(addDashboard(dashboard))
 })
 
