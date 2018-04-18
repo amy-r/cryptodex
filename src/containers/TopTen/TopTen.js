@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import './TopTen.css';
 
-const TopTen = (props) => {
+export const TopTen = (props) => {
 
   const tableData = props.dashboard.map( (curr) => {
     return (      
@@ -30,7 +30,7 @@ const TopTen = (props) => {
   )
 }
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   dashboard: state.dashboard
 })
 

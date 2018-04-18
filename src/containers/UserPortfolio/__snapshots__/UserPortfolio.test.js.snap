@@ -1,0 +1,1515 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserPortfolio should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <UserPortfolio
+    dashboard={
+        Array [
+            Object {
+              "availableSupply": "16957550.0",
+              "currency": "BTC",
+              "marketCap": 126110300068.1315,
+              "price": "7436.82313",
+            },
+            Object {
+              "availableSupply": "98680455.0",
+              "currency": "ETH",
+              "marketCap": 38207824855.0488,
+              "price": "387.43253",
+            },
+            Object {
+              "availableSupply": "39094520623.0",
+              "currency": "XRP",
+              "marketCap": 19161006447.74476,
+              "price": "0.49032",
+            },
+          ]
+    }
+    portfolio={
+        Object {
+            "BTC": 1,
+            "ETH": 1,
+            "FAKECOIN": 1,
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2>
+           Your Portfolio 
+</h2>,
+        <table
+          className="user-portfolio"
+>
+          <tbody>
+                    <tr>
+                              <th>
+                                         Currency 
+                              </th>
+                              <th>
+                                         Amount 
+                              </th>
+                              <th>
+                                         Value 
+                              </th>
+                              <th>
+                                         Percentage 
+                              </th>
+                    </tr>
+                    <tr>
+                              <td>
+                                         
+                                        BTC
+                                         
+                              </td>
+                              <td>
+                                         
+                                        1
+                                         
+                              </td>
+                              <td>
+                                         
+                                        7436.82
+                                         
+                              </td>
+                              <td>
+                                         
+                                        6.67
+                                         
+                              </td>
+                    </tr>
+                    <tr>
+                              <td>
+                                         
+                                        ETH
+                                         
+                              </td>
+                              <td>
+                                         
+                                        1
+                                         
+                              </td>
+                              <td>
+                                         
+                                        387.43
+                                         
+                              </td>
+                              <td>
+                                         
+                                        13.33
+                                         
+                              </td>
+                    </tr>
+          </tbody>
+</table>,
+        <h4>
+           Your Assets Outside the Top Ten 
+</h4>,
+        <table
+          className="outliers"
+>
+          <tbody>
+                    <tr>
+                              <th>
+                                         Currency 
+                              </th>
+                              <th>
+                                         Amount 
+                              </th>
+                    </tr>
+                    <tr>
+                              <td>
+                                         
+                                        FAKECOIN
+                                         
+                              </td>
+                              <td>
+                                         
+                                        1
+                                         
+                              </td>
+                    </tr>
+          </tbody>
+</table>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": " Your Portfolio ",
+        },
+        "ref": null,
+        "rendered": " Your Portfolio ",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <tbody>
+            <tr>
+                        <th>
+                                     Currency 
+                        </th>
+                        <th>
+                                     Amount 
+                        </th>
+                        <th>
+                                     Value 
+                        </th>
+                        <th>
+                                     Percentage 
+                        </th>
+            </tr>
+            <tr>
+                        <td>
+                                     
+                                    BTC
+                                     
+                        </td>
+                        <td>
+                                     
+                                    1
+                                     
+                        </td>
+                        <td>
+                                     
+                                    7436.82
+                                     
+                        </td>
+                        <td>
+                                     
+                                    6.67
+                                     
+                        </td>
+            </tr>
+            <tr>
+                        <td>
+                                     
+                                    ETH
+                                     
+                        </td>
+                        <td>
+                                     
+                                    1
+                                     
+                        </td>
+                        <td>
+                                     
+                                    387.43
+                                     
+                        </td>
+                        <td>
+                                     
+                                    13.33
+                                     
+                        </td>
+            </tr>
+</tbody>,
+          "className": "user-portfolio",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <tr>
+                <th>
+                                 Currency 
+                </th>
+                <th>
+                                 Amount 
+                </th>
+                <th>
+                                 Value 
+                </th>
+                <th>
+                                 Percentage 
+                </th>
+</tr>,
+              Array [
+                <tr>
+                  <td>
+                                     
+                                    BTC
+                                     
+                  </td>
+                  <td>
+                                     
+                                    1
+                                     
+                  </td>
+                  <td>
+                                     
+                                    7436.82
+                                     
+                  </td>
+                  <td>
+                                     
+                                    6.67
+                                     
+                  </td>
+</tr>,
+                <tr>
+                  <td>
+                                     
+                                    ETH
+                                     
+                  </td>
+                  <td>
+                                     
+                                    1
+                                     
+                  </td>
+                  <td>
+                                     
+                                    387.43
+                                     
+                  </td>
+                  <td>
+                                     
+                                    13.33
+                                     
+                  </td>
+</tr>,
+              ],
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <th>
+                     Currency 
+</th>,
+                  <th>
+                     Amount 
+</th>,
+                  <th>
+                     Value 
+</th>,
+                  <th>
+                     Percentage 
+</th>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": " Currency ",
+                  },
+                  "ref": null,
+                  "rendered": " Currency ",
+                  "type": "th",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": " Amount ",
+                  },
+                  "ref": null,
+                  "rendered": " Amount ",
+                  "type": "th",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": " Value ",
+                  },
+                  "ref": null,
+                  "rendered": " Value ",
+                  "type": "th",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": " Percentage ",
+                  },
+                  "ref": null,
+                  "rendered": " Percentage ",
+                  "type": "th",
+                },
+              ],
+              "type": "tr",
+            },
+            Object {
+              "instance": null,
+              "key": "BTC",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <td>
+                     
+                    BTC
+                     
+</td>,
+                  <td>
+                     
+                    1
+                     
+</td>,
+                  <td>
+                     
+                    7436.82
+                     
+</td>,
+                  <td>
+                     
+                    6.67
+                     
+</td>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      "BTC",
+                      " ",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    "BTC",
+                    " ",
+                  ],
+                  "type": "td",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      1,
+                      " ",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    1,
+                    " ",
+                  ],
+                  "type": "td",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      7436.82,
+                      " ",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    7436.82,
+                    " ",
+                  ],
+                  "type": "td",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      6.67,
+                      " ",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    6.67,
+                    " ",
+                  ],
+                  "type": "td",
+                },
+              ],
+              "type": "tr",
+            },
+            Object {
+              "instance": null,
+              "key": "ETH",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <td>
+                     
+                    ETH
+                     
+</td>,
+                  <td>
+                     
+                    1
+                     
+</td>,
+                  <td>
+                     
+                    387.43
+                     
+</td>,
+                  <td>
+                     
+                    13.33
+                     
+</td>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      "ETH",
+                      " ",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    "ETH",
+                    " ",
+                  ],
+                  "type": "td",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      1,
+                      " ",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    1,
+                    " ",
+                  ],
+                  "type": "td",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      387.43,
+                      " ",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    387.43,
+                    " ",
+                  ],
+                  "type": "td",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      13.33,
+                      " ",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    13.33,
+                    " ",
+                  ],
+                  "type": "td",
+                },
+              ],
+              "type": "tr",
+            },
+          ],
+          "type": "tbody",
+        },
+        "type": "table",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": " Your Assets Outside the Top Ten ",
+        },
+        "ref": null,
+        "rendered": " Your Assets Outside the Top Ten ",
+        "type": "h4",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <tbody>
+            <tr>
+                        <th>
+                                     Currency 
+                        </th>
+                        <th>
+                                     Amount 
+                        </th>
+            </tr>
+            <tr>
+                        <td>
+                                     
+                                    FAKECOIN
+                                     
+                        </td>
+                        <td>
+                                     
+                                    1
+                                     
+                        </td>
+            </tr>
+</tbody>,
+          "className": "outliers",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <tr>
+                <th>
+                                 Currency 
+                </th>
+                <th>
+                                 Amount 
+                </th>
+</tr>,
+              Array [
+                <tr>
+                  <td>
+                                     
+                                    FAKECOIN
+                                     
+                  </td>
+                  <td>
+                                     
+                                    1
+                                     
+                  </td>
+</tr>,
+              ],
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <th>
+                     Currency 
+</th>,
+                  <th>
+                     Amount 
+</th>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": " Currency ",
+                  },
+                  "ref": null,
+                  "rendered": " Currency ",
+                  "type": "th",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": " Amount ",
+                  },
+                  "ref": null,
+                  "rendered": " Amount ",
+                  "type": "th",
+                },
+              ],
+              "type": "tr",
+            },
+            Object {
+              "instance": null,
+              "key": "FAKECOIN",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <td>
+                     
+                    FAKECOIN
+                     
+</td>,
+                  <td>
+                     
+                    1
+                     
+</td>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      "FAKECOIN",
+                      " ",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    "FAKECOIN",
+                    " ",
+                  ],
+                  "type": "td",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      1,
+                      " ",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    1,
+                    " ",
+                  ],
+                  "type": "td",
+                },
+              ],
+              "type": "tr",
+            },
+          ],
+          "type": "tbody",
+        },
+        "type": "table",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2>
+             Your Portfolio 
+</h2>,
+          <table
+            className="user-portfolio"
+>
+            <tbody>
+                        <tr>
+                                    <th>
+                                                 Currency 
+                                    </th>
+                                    <th>
+                                                 Amount 
+                                    </th>
+                                    <th>
+                                                 Value 
+                                    </th>
+                                    <th>
+                                                 Percentage 
+                                    </th>
+                        </tr>
+                        <tr>
+                                    <td>
+                                                 
+                                                BTC
+                                                 
+                                    </td>
+                                    <td>
+                                                 
+                                                1
+                                                 
+                                    </td>
+                                    <td>
+                                                 
+                                                7436.82
+                                                 
+                                    </td>
+                                    <td>
+                                                 
+                                                6.67
+                                                 
+                                    </td>
+                        </tr>
+                        <tr>
+                                    <td>
+                                                 
+                                                ETH
+                                                 
+                                    </td>
+                                    <td>
+                                                 
+                                                1
+                                                 
+                                    </td>
+                                    <td>
+                                                 
+                                                387.43
+                                                 
+                                    </td>
+                                    <td>
+                                                 
+                                                13.33
+                                                 
+                                    </td>
+                        </tr>
+            </tbody>
+</table>,
+          <h4>
+             Your Assets Outside the Top Ten 
+</h4>,
+          <table
+            className="outliers"
+>
+            <tbody>
+                        <tr>
+                                    <th>
+                                                 Currency 
+                                    </th>
+                                    <th>
+                                                 Amount 
+                                    </th>
+                        </tr>
+                        <tr>
+                                    <td>
+                                                 
+                                                FAKECOIN
+                                                 
+                                    </td>
+                                    <td>
+                                                 
+                                                1
+                                                 
+                                    </td>
+                        </tr>
+            </tbody>
+</table>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": " Your Portfolio ",
+          },
+          "ref": null,
+          "rendered": " Your Portfolio ",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <tbody>
+              <tr>
+                            <th>
+                                           Currency 
+                            </th>
+                            <th>
+                                           Amount 
+                            </th>
+                            <th>
+                                           Value 
+                            </th>
+                            <th>
+                                           Percentage 
+                            </th>
+              </tr>
+              <tr>
+                            <td>
+                                           
+                                          BTC
+                                           
+                            </td>
+                            <td>
+                                           
+                                          1
+                                           
+                            </td>
+                            <td>
+                                           
+                                          7436.82
+                                           
+                            </td>
+                            <td>
+                                           
+                                          6.67
+                                           
+                            </td>
+              </tr>
+              <tr>
+                            <td>
+                                           
+                                          ETH
+                                           
+                            </td>
+                            <td>
+                                           
+                                          1
+                                           
+                            </td>
+                            <td>
+                                           
+                                          387.43
+                                           
+                            </td>
+                            <td>
+                                           
+                                          13.33
+                                           
+                            </td>
+              </tr>
+</tbody>,
+            "className": "user-portfolio",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <tr>
+                  <th>
+                                     Currency 
+                  </th>
+                  <th>
+                                     Amount 
+                  </th>
+                  <th>
+                                     Value 
+                  </th>
+                  <th>
+                                     Percentage 
+                  </th>
+</tr>,
+                Array [
+                  <tr>
+                    <td>
+                                         
+                                        BTC
+                                         
+                    </td>
+                    <td>
+                                         
+                                        1
+                                         
+                    </td>
+                    <td>
+                                         
+                                        7436.82
+                                         
+                    </td>
+                    <td>
+                                         
+                                        6.67
+                                         
+                    </td>
+</tr>,
+                  <tr>
+                    <td>
+                                         
+                                        ETH
+                                         
+                    </td>
+                    <td>
+                                         
+                                        1
+                                         
+                    </td>
+                    <td>
+                                         
+                                        387.43
+                                         
+                    </td>
+                    <td>
+                                         
+                                        13.33
+                                         
+                    </td>
+</tr>,
+                ],
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <th>
+                       Currency 
+</th>,
+                    <th>
+                       Amount 
+</th>,
+                    <th>
+                       Value 
+</th>,
+                    <th>
+                       Percentage 
+</th>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": " Currency ",
+                    },
+                    "ref": null,
+                    "rendered": " Currency ",
+                    "type": "th",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": " Amount ",
+                    },
+                    "ref": null,
+                    "rendered": " Amount ",
+                    "type": "th",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": " Value ",
+                    },
+                    "ref": null,
+                    "rendered": " Value ",
+                    "type": "th",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": " Percentage ",
+                    },
+                    "ref": null,
+                    "rendered": " Percentage ",
+                    "type": "th",
+                  },
+                ],
+                "type": "tr",
+              },
+              Object {
+                "instance": null,
+                "key": "BTC",
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <td>
+                       
+                      BTC
+                       
+</td>,
+                    <td>
+                       
+                      1
+                       
+</td>,
+                    <td>
+                       
+                      7436.82
+                       
+</td>,
+                    <td>
+                       
+                      6.67
+                       
+</td>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        " ",
+                        "BTC",
+                        " ",
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      " ",
+                      "BTC",
+                      " ",
+                    ],
+                    "type": "td",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        " ",
+                        1,
+                        " ",
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      " ",
+                      1,
+                      " ",
+                    ],
+                    "type": "td",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        " ",
+                        7436.82,
+                        " ",
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      " ",
+                      7436.82,
+                      " ",
+                    ],
+                    "type": "td",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        " ",
+                        6.67,
+                        " ",
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      " ",
+                      6.67,
+                      " ",
+                    ],
+                    "type": "td",
+                  },
+                ],
+                "type": "tr",
+              },
+              Object {
+                "instance": null,
+                "key": "ETH",
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <td>
+                       
+                      ETH
+                       
+</td>,
+                    <td>
+                       
+                      1
+                       
+</td>,
+                    <td>
+                       
+                      387.43
+                       
+</td>,
+                    <td>
+                       
+                      13.33
+                       
+</td>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        " ",
+                        "ETH",
+                        " ",
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      " ",
+                      "ETH",
+                      " ",
+                    ],
+                    "type": "td",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        " ",
+                        1,
+                        " ",
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      " ",
+                      1,
+                      " ",
+                    ],
+                    "type": "td",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        " ",
+                        387.43,
+                        " ",
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      " ",
+                      387.43,
+                      " ",
+                    ],
+                    "type": "td",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        " ",
+                        13.33,
+                        " ",
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      " ",
+                      13.33,
+                      " ",
+                    ],
+                    "type": "td",
+                  },
+                ],
+                "type": "tr",
+              },
+            ],
+            "type": "tbody",
+          },
+          "type": "table",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": " Your Assets Outside the Top Ten ",
+          },
+          "ref": null,
+          "rendered": " Your Assets Outside the Top Ten ",
+          "type": "h4",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <tbody>
+              <tr>
+                            <th>
+                                           Currency 
+                            </th>
+                            <th>
+                                           Amount 
+                            </th>
+              </tr>
+              <tr>
+                            <td>
+                                           
+                                          FAKECOIN
+                                           
+                            </td>
+                            <td>
+                                           
+                                          1
+                                           
+                            </td>
+              </tr>
+</tbody>,
+            "className": "outliers",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <tr>
+                  <th>
+                                     Currency 
+                  </th>
+                  <th>
+                                     Amount 
+                  </th>
+</tr>,
+                Array [
+                  <tr>
+                    <td>
+                                         
+                                        FAKECOIN
+                                         
+                    </td>
+                    <td>
+                                         
+                                        1
+                                         
+                    </td>
+</tr>,
+                ],
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <th>
+                       Currency 
+</th>,
+                    <th>
+                       Amount 
+</th>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": " Currency ",
+                    },
+                    "ref": null,
+                    "rendered": " Currency ",
+                    "type": "th",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": " Amount ",
+                    },
+                    "ref": null,
+                    "rendered": " Amount ",
+                    "type": "th",
+                  },
+                ],
+                "type": "tr",
+              },
+              Object {
+                "instance": null,
+                "key": "FAKECOIN",
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <td>
+                       
+                      FAKECOIN
+                       
+</td>,
+                    <td>
+                       
+                      1
+                       
+</td>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        " ",
+                        "FAKECOIN",
+                        " ",
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      " ",
+                      "FAKECOIN",
+                      " ",
+                    ],
+                    "type": "td",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        " ",
+                        1,
+                        " ",
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      " ",
+                      1,
+                      " ",
+                    ],
+                    "type": "td",
+                  },
+                ],
+                "type": "tr",
+              },
+            ],
+            "type": "tbody",
+          },
+          "type": "table",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

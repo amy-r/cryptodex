@@ -10,7 +10,7 @@ import UserPortfolio from '../UserPortfolio/UserPortfolio';
 import TopTen from '../TopTen/TopTen';
 import './Home.css';
 
-class Home extends Component {
+export class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -41,7 +41,6 @@ class Home extends Component {
     writeCurrency(user.uid, newCurrency);
     this.setState({name: '', amount: ''});
     getUserData(user.uid).then((portfolio) => this.props.getUserPortfolio(portfolio));
-
   }
 
   handleChange = (event) => {
@@ -91,13 +90,13 @@ class Home extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   dashboard: state.dashboard,
   user: state.user,
   portfolio: state.portfolio
 })
 
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   addCurrency: (currency) => dispatch(addCurrency(currency)),
   logIn: (user) => dispatch(addUser(user)),
   getUserPortfolio: (portfolio) => dispatch(getUserPortfolio(portfolio))

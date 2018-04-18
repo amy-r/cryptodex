@@ -47,11 +47,16 @@ export const removeMismatches = (portfolio, dashboard) => {
       return curr.currency
     })
 
-    const matchedCurrencyNames = userCurs.filter( (name) => {
+    const matchNames = userCurs.filter( (name) => {
       return dashboardCurs.includes(name) 
     })
 
-    return matchedCurrencyNames 
+    const matches = matchNames.reduce( (obj, match) => {
+      obj[match] = portfolio[match];
+      return obj;
+    }, {})
+
+    return matches
   }
 }
 
@@ -73,16 +78,6 @@ export const findMismatches = (portfolio, dashboard) => {
 
     return mismatches
   } 
-}
-
-export const rejoinMatches = (matches, portfolio) => {
-  if (matches && portfolio) {
-    const newPortfolio = matches.reduce( (obj, match) => {
-      obj[match] = portfolio[match];
-      return obj
-    }, {})
-    return newPortfolio
-  }  
 }
 
 export const calculateValue = (portfolio, dashboard) => {
@@ -107,6 +102,7 @@ export const calculateValue = (portfolio, dashboard) => {
 } 
 
 export const calculatePercent = (values) => {   
+
     const total = values.reduce( (a, b) => a+b, 0)
 
     const totalsArr = values.map( (curr) => {

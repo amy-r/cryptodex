@@ -9,7 +9,7 @@ export const writeCurrency = (user, curr) => {
       [curr.name]: curr.amount
     });
   } catch (err) {
-    throw new Error(`Could not add currency: ${err}`)
+    throw new Error('Could not add currency')
   }
 }
 
