@@ -22,76 +22,18 @@ export const createCapPercentage = jest.fn().mockImplementation( () => {
   return mockDashboard
 })
 
-export const removeMismatches = (portfolio, dashboard) => {
-  if (portfolio && dashboard) {
-    const userCurs = Object.keys(portfolio);
-    const dashboardCurs = dashboard.map( (curr) => {
-      return curr.currency
-    })
+export const removeMismatches = jest.fn().mockImplementation( () => {
+  return { BTC: 1, ETH: 1}
+})
 
-    const matchNames = userCurs.filter( (name) => {
-      return dashboardCurs.includes(name) 
-    })
+export const findMismatches = jest.fn().mockImplementation( () => {
+  return { FAKECOIN: 1 }
+})
 
-    const matches = matchNames.reduce( (obj, match) => {
-      obj[match] = portfolio[match];
-      return obj;
-    }, {})
+export const calculateValue = jest.fn().mockImplementation( () => {
+  return [7436.82, 387.43,]
+})
 
-    return matches
-  }
-}
-
-export const findMismatches = (portfolio, dashboard) => {
-  if (portfolio && dashboard) {
-    const userCurs = Object.keys(portfolio);
-    const dashboardCurs = dashboard.map( (curr) => {
-      return curr.currency
-    })
-
-    const mismatchNames = userCurs.filter( (name) => {
-      return !dashboardCurs.includes(name) 
-    })
-
-    const mismatches = mismatchNames.reduce( (obj, mismatch) => {
-      obj[mismatch] = portfolio[mismatch];
-      return obj;
-    }, {}); 
-
-    return mismatches
-  } 
-}
-
-export const calculateValue = (portfolio, dashboard) => {
-  if (portfolio && dashboard) {
-    const currencyNames = Object.keys(portfolio);
-
-    const values = currencyNames.map( (curr) => {
-      const match = dashboard.find((dashCurr) => {
-        return dashCurr.currency === curr
-      });
-
-      const price = match.price;
-      const value = price * portfolio[curr];
-      return parseFloat(Math.max(value, 2.8).toFixed(2));
-    });
-    
-    return values;
-    
-  } else {
-    return [];
-  }  
-} 
-
-export const calculatePercent = (values) => {   
-
-    const total = values.reduce( (a, b) => a+b, 0)
-
-    const totalsArr = values.map( (curr) => {
-      const percentage = (curr/total) * 100;
-      const rounded = parseFloat(percentage.toFixed(2));
-      return rounded
-    })
-
-    return totalsArr
-}
+export const calculatePercent = jest.fn().mockImplementation( () => {
+  return [6.67,13.33,20,26.67,33.33]
+})

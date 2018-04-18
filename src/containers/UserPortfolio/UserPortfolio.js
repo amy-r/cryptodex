@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import './UserPortfolio.css';
 import { calculateValue, calculatePercent, removeMismatches, findMismatches } from '../../helper/helper';
 
-class UserPortfolio extends Component {
+export class UserPortfolio extends Component {
 
   getPortfolio = (props) => {
     const { portfolio, dashboard } = this.props;
@@ -72,7 +72,7 @@ class UserPortfolio extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   portfolio: state.portfolio,
   dashboard: state.dashboard,
   user: state.user
