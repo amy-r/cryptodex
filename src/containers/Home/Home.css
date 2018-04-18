@@ -8,8 +8,7 @@ h1 {
 }
 
 .logout {
-  float: right;
-  position: relative;
+  /*position: absolute;*/
   z-index: 11;
   display: inline;
   margin-right: 5%;
@@ -25,6 +24,7 @@ form {
 
 .body {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;  
 }
 
@@ -46,12 +46,14 @@ header {
   margin-top: 4%;
   margin-bottom: 4%;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 select {
   background-color: #F5A623;
   padding: 2% 5%;
-  /*-webkit-appearance: none;*/
   font-size: 1em;
   color: white;
 }

@@ -59,16 +59,16 @@ export class UserPortfolio extends Component {
             {this.getPortfolio()}
           </tbody>  
         </table>
-          <h4> Your Assets Outside the Top Ten </h4>
-          <table className= 'outliers'>
-            <tbody>
-              <tr>
-                <th> Currency </th>
-                <th> Amount </th>
-              </tr>
-              {this.getMismatches()}
-            </tbody>
-          </table>   
+        <h4> Your Assets Outside the Top Ten </h4>
+        <table className= 'outliers'>
+          <tbody>
+            <tr>
+              <th> Currency </th>
+              <th> Amount </th>
+            </tr>
+            {this.getMismatches()}
+          </tbody>
+        </table>   
       </div>
     );
   }

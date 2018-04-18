@@ -1,15 +1,16 @@
 .TopTen {
-  background-color: white;
-  opacity: 0.4;
-  z-index: 10;
+  background: none;
+  z-index: 100;
   position: relative;
+  border: 3px solid white;
   border-radius: 10px;
   margin: auto;
   width: max-content;
+  color: white;
 }
 
 .table-head {
-  border-bottom: 1px solid black;
+  font-weight: 700;
 }
 
 td {

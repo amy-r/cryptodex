@@ -10,6 +10,7 @@
   z-index: 10;
   background-color: white;
   border-radius: 10px;
+
 }
 
 td {
@@ -29,7 +30,7 @@ tbody {
   margin: 5%;
 }
 
-.outliers th {
-  margin: 5%;
-  padding: 5%;
+th .outliers {
+  margin: 10%;
+  padding: 10%;
 }
