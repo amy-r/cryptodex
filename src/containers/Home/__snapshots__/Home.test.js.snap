@@ -1,0 +1,1151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home renders without crashing 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Home
+    addCurrency={[Function]}
+    dashboard={
+        Array [
+            Object {
+              "availableSupply": "16957550.0",
+              "currency": "BTC",
+              "marketCap": 126110300068.1315,
+              "price": "7436.82313",
+            },
+            Object {
+              "availableSupply": "98680455.0",
+              "currency": "ETH",
+              "marketCap": 38207824855.0488,
+              "price": "387.43253",
+            },
+            Object {
+              "availableSupply": "39094520623.0",
+              "currency": "XRP",
+              "marketCap": 19161006447.74476,
+              "price": "0.49032",
+            },
+          ]
+    }
+    getUserPortfolio={[Function]}
+    history={Array []}
+    portfolio={
+        Object {
+            "BTC": 1,
+            "ETH": 1,
+          }
+    }
+    user={1}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <header>
+          <h1>
+                     
+                    <span
+                              className="crypto"
+                    >
+                              CRYPTO
+                    </span>
+                    <span
+                              className="dex"
+                    >
+                              DEX
+                    </span>
+          </h1>
+          <button
+                    className="logout"
+                    onClick={[Function]}
+          >
+                     Log Out 
+          </button>
+</header>,
+        <div
+          className="body"
+>
+          <div
+                    className="left"
+          >
+                    <Connect(UserPortfolio) />
+                    <h4>
+                               Add a currency you own 
+                    </h4>
+                    <form
+                              onSubmit={[Function]}
+                    >
+                              <select
+                                        name="name"
+                                        onChange={[Function]}
+                              >
+                                        <option
+                                                  value="BTC"
+                                        >
+                                                   
+                                                  BTC
+                                                   
+                                        </option>
+                                        <option
+                                                  value="ETH"
+                                        >
+                                                   
+                                                  ETH
+                                                   
+                                        </option>
+                                        <option
+                                                  value="XRP"
+                                        >
+                                                   
+                                                  XRP
+                                                   
+                                        </option>
+                              </select>
+                              <input
+                                        name="amount"
+                                        onChange={[Function]}
+                                        placeholder="amount"
+                                        type="text"
+                                        value=""
+                              />
+                              <input
+                                        type="submit"
+                              />
+                    </form>
+          </div>
+          <div
+                    className="right"
+          >
+                    <h2>
+                               Today's Market 
+                    </h2>
+                    <Connect(Component) />
+          </div>
+</div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h1>
+               
+              <span
+                            className="crypto"
+              >
+                            CRYPTO
+              </span>
+              <span
+                            className="dex"
+              >
+                            DEX
+              </span>
+</h1>,
+            <button
+              className="logout"
+              onClick={[Function]}
+>
+               Log Out 
+</button>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                " ",
+                <span
+                  className="crypto"
+>
+                  CRYPTO
+</span>,
+                <span
+                  className="dex"
+>
+                  DEX
+</span>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              " ",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "CRYPTO",
+                  "className": "crypto",
+                },
+                "ref": null,
+                "rendered": "CRYPTO",
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "DEX",
+                  "className": "dex",
+                },
+                "ref": null,
+                "rendered": "DEX",
+                "type": "span",
+              },
+            ],
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": " Log Out ",
+              "className": "logout",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": " Log Out ",
+            "type": "button",
+          },
+        ],
+        "type": "header",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="left"
+>
+              <Connect(UserPortfolio) />
+              <h4>
+                             Add a currency you own 
+              </h4>
+              <form
+                            onSubmit={[Function]}
+              >
+                            <select
+                                          name="name"
+                                          onChange={[Function]}
+                            >
+                                          <option
+                                                        value="BTC"
+                                          >
+                                                         
+                                                        BTC
+                                                         
+                                          </option>
+                                          <option
+                                                        value="ETH"
+                                          >
+                                                         
+                                                        ETH
+                                                         
+                                          </option>
+                                          <option
+                                                        value="XRP"
+                                          >
+                                                         
+                                                        XRP
+                                                         
+                                          </option>
+                            </select>
+                            <input
+                                          name="amount"
+                                          onChange={[Function]}
+                                          placeholder="amount"
+                                          type="text"
+                                          value=""
+                            />
+                            <input
+                                          type="submit"
+                            />
+              </form>
+</div>,
+            <div
+              className="right"
+>
+              <h2>
+                             Today's Market 
+              </h2>
+              <Connect(Component) />
+</div>,
+          ],
+          "className": "body",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <Connect(UserPortfolio) />,
+                <h4>
+                   Add a currency you own 
+</h4>,
+                <form
+                  onSubmit={[Function]}
+>
+                  <select
+                                    name="name"
+                                    onChange={[Function]}
+                  >
+                                    <option
+                                                      value="BTC"
+                                    >
+                                                       
+                                                      BTC
+                                                       
+                                    </option>
+                                    <option
+                                                      value="ETH"
+                                    >
+                                                       
+                                                      ETH
+                                                       
+                                    </option>
+                                    <option
+                                                      value="XRP"
+                                    >
+                                                       
+                                                      XRP
+                                                       
+                                    </option>
+                  </select>
+                  <input
+                                    name="amount"
+                                    onChange={[Function]}
+                                    placeholder="amount"
+                                    type="text"
+                                    value=""
+                  />
+                  <input
+                                    type="submit"
+                  />
+</form>,
+              ],
+              "className": "left",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": " Add a currency you own ",
+                },
+                "ref": null,
+                "rendered": " Add a currency you own ",
+                "type": "h4",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <select
+                      name="name"
+                      onChange={[Function]}
+>
+                      <option
+                                            value="BTC"
+                      >
+                                             
+                                            BTC
+                                             
+                      </option>
+                      <option
+                                            value="ETH"
+                      >
+                                             
+                                            ETH
+                                             
+                      </option>
+                      <option
+                                            value="XRP"
+                      >
+                                             
+                                            XRP
+                                             
+                      </option>
+</select>,
+                    <input
+                      name="amount"
+                      onChange={[Function]}
+                      placeholder="amount"
+                      type="text"
+                      value=""
+/>,
+                    <input
+                      type="submit"
+/>,
+                  ],
+                  "onSubmit": [Function],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <option
+                          value="BTC"
+>
+                           
+                          BTC
+                           
+</option>,
+                        <option
+                          value="ETH"
+>
+                           
+                          ETH
+                           
+</option>,
+                        <option
+                          value="XRP"
+>
+                           
+                          XRP
+                           
+</option>,
+                      ],
+                      "name": "name",
+                      "onChange": [Function],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": "BTC",
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            " ",
+                            "BTC",
+                            " ",
+                          ],
+                          "value": "BTC",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          " ",
+                          "BTC",
+                          " ",
+                        ],
+                        "type": "option",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": "ETH",
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            " ",
+                            "ETH",
+                            " ",
+                          ],
+                          "value": "ETH",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          " ",
+                          "ETH",
+                          " ",
+                        ],
+                        "type": "option",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": "XRP",
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            " ",
+                            "XRP",
+                            " ",
+                          ],
+                          "value": "XRP",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          " ",
+                          "XRP",
+                          " ",
+                        ],
+                        "type": "option",
+                      },
+                    ],
+                    "type": "select",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "name": "amount",
+                      "onChange": [Function],
+                      "placeholder": "amount",
+                      "type": "text",
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "type": "submit",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                ],
+                "type": "form",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h2>
+                   Today's Market 
+</h2>,
+                <Connect(Component) />,
+              ],
+              "className": "right",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": " Today's Market ",
+                },
+                "ref": null,
+                "rendered": " Today's Market ",
+                "type": "h2",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <header>
+            <h1>
+                         
+                        <span
+                                    className="crypto"
+                        >
+                                    CRYPTO
+                        </span>
+                        <span
+                                    className="dex"
+                        >
+                                    DEX
+                        </span>
+            </h1>
+            <button
+                        className="logout"
+                        onClick={[Function]}
+            >
+                         Log Out 
+            </button>
+</header>,
+          <div
+            className="body"
+>
+            <div
+                        className="left"
+            >
+                        <Connect(UserPortfolio) />
+                        <h4>
+                                     Add a currency you own 
+                        </h4>
+                        <form
+                                    onSubmit={[Function]}
+                        >
+                                    <select
+                                                name="name"
+                                                onChange={[Function]}
+                                    >
+                                                <option
+                                                            value="BTC"
+                                                >
+                                                             
+                                                            BTC
+                                                             
+                                                </option>
+                                                <option
+                                                            value="ETH"
+                                                >
+                                                             
+                                                            ETH
+                                                             
+                                                </option>
+                                                <option
+                                                            value="XRP"
+                                                >
+                                                             
+                                                            XRP
+                                                             
+                                                </option>
+                                    </select>
+                                    <input
+                                                name="amount"
+                                                onChange={[Function]}
+                                                placeholder="amount"
+                                                type="text"
+                                                value=""
+                                    />
+                                    <input
+                                                type="submit"
+                                    />
+                        </form>
+            </div>
+            <div
+                        className="right"
+            >
+                        <h2>
+                                     Today's Market 
+                        </h2>
+                        <Connect(Component) />
+            </div>
+</div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h1>
+                 
+                <span
+                                className="crypto"
+                >
+                                CRYPTO
+                </span>
+                <span
+                                className="dex"
+                >
+                                DEX
+                </span>
+</h1>,
+              <button
+                className="logout"
+                onClick={[Function]}
+>
+                 Log Out 
+</button>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " ",
+                  <span
+                    className="crypto"
+>
+                    CRYPTO
+</span>,
+                  <span
+                    className="dex"
+>
+                    DEX
+</span>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                " ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "CRYPTO",
+                    "className": "crypto",
+                  },
+                  "ref": null,
+                  "rendered": "CRYPTO",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "DEX",
+                    "className": "dex",
+                  },
+                  "ref": null,
+                  "rendered": "DEX",
+                  "type": "span",
+                },
+              ],
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": " Log Out ",
+                "className": "logout",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": " Log Out ",
+              "type": "button",
+            },
+          ],
+          "type": "header",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="left"
+>
+                <Connect(UserPortfolio) />
+                <h4>
+                                 Add a currency you own 
+                </h4>
+                <form
+                                onSubmit={[Function]}
+                >
+                                <select
+                                                name="name"
+                                                onChange={[Function]}
+                                >
+                                                <option
+                                                                value="BTC"
+                                                >
+                                                                 
+                                                                BTC
+                                                                 
+                                                </option>
+                                                <option
+                                                                value="ETH"
+                                                >
+                                                                 
+                                                                ETH
+                                                                 
+                                                </option>
+                                                <option
+                                                                value="XRP"
+                                                >
+                                                                 
+                                                                XRP
+                                                                 
+                                                </option>
+                                </select>
+                                <input
+                                                name="amount"
+                                                onChange={[Function]}
+                                                placeholder="amount"
+                                                type="text"
+                                                value=""
+                                />
+                                <input
+                                                type="submit"
+                                />
+                </form>
+</div>,
+              <div
+                className="right"
+>
+                <h2>
+                                 Today's Market 
+                </h2>
+                <Connect(Component) />
+</div>,
+            ],
+            "className": "body",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <Connect(UserPortfolio) />,
+                  <h4>
+                     Add a currency you own 
+</h4>,
+                  <form
+                    onSubmit={[Function]}
+>
+                    <select
+                                        name="name"
+                                        onChange={[Function]}
+                    >
+                                        <option
+                                                            value="BTC"
+                                        >
+                                                             
+                                                            BTC
+                                                             
+                                        </option>
+                                        <option
+                                                            value="ETH"
+                                        >
+                                                             
+                                                            ETH
+                                                             
+                                        </option>
+                                        <option
+                                                            value="XRP"
+                                        >
+                                                             
+                                                            XRP
+                                                             
+                                        </option>
+                    </select>
+                    <input
+                                        name="amount"
+                                        onChange={[Function]}
+                                        placeholder="amount"
+                                        type="text"
+                                        value=""
+                    />
+                    <input
+                                        type="submit"
+                    />
+</form>,
+                ],
+                "className": "left",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": " Add a currency you own ",
+                  },
+                  "ref": null,
+                  "rendered": " Add a currency you own ",
+                  "type": "h4",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <select
+                        name="name"
+                        onChange={[Function]}
+>
+                        <option
+                                                value="BTC"
+                        >
+                                                 
+                                                BTC
+                                                 
+                        </option>
+                        <option
+                                                value="ETH"
+                        >
+                                                 
+                                                ETH
+                                                 
+                        </option>
+                        <option
+                                                value="XRP"
+                        >
+                                                 
+                                                XRP
+                                                 
+                        </option>
+</select>,
+                      <input
+                        name="amount"
+                        onChange={[Function]}
+                        placeholder="amount"
+                        type="text"
+                        value=""
+/>,
+                      <input
+                        type="submit"
+/>,
+                    ],
+                    "onSubmit": [Function],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <option
+                            value="BTC"
+>
+                             
+                            BTC
+                             
+</option>,
+                          <option
+                            value="ETH"
+>
+                             
+                            ETH
+                             
+</option>,
+                          <option
+                            value="XRP"
+>
+                             
+                            XRP
+                             
+</option>,
+                        ],
+                        "name": "name",
+                        "onChange": [Function],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": "BTC",
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              " ",
+                              "BTC",
+                              " ",
+                            ],
+                            "value": "BTC",
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            " ",
+                            "BTC",
+                            " ",
+                          ],
+                          "type": "option",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": "ETH",
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              " ",
+                              "ETH",
+                              " ",
+                            ],
+                            "value": "ETH",
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            " ",
+                            "ETH",
+                            " ",
+                          ],
+                          "type": "option",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": "XRP",
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              " ",
+                              "XRP",
+                              " ",
+                            ],
+                            "value": "XRP",
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            " ",
+                            "XRP",
+                            " ",
+                          ],
+                          "type": "option",
+                        },
+                      ],
+                      "type": "select",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "name": "amount",
+                        "onChange": [Function],
+                        "placeholder": "amount",
+                        "type": "text",
+                        "value": "",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "type": "submit",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
+                    },
+                  ],
+                  "type": "form",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h2>
+                     Today's Market 
+</h2>,
+                  <Connect(Component) />,
+                ],
+                "className": "right",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": " Today's Market ",
+                  },
+                  "ref": null,
+                  "rendered": " Today's Market ",
+                  "type": "h2",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "disableLifecycleMethods": true,
+  },
+}
+`;
