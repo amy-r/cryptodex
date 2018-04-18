@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './UserPortfolio.css';
 import { calculateValue, calculatePercent, removeMismatches, findMismatches } from '../../helper/helper';
+import PropTypes from 'prop-types';
 
 export class UserPortfolio extends Component {
 
@@ -76,6 +77,16 @@ export const mapStateToProps = (state) => ({
   portfolio: state.portfolio,
   dashboard: state.dashboard,
   user: state.user
-})
+});
 
-export default connect(mapStateToProps)(UserPortfolio)
+UserPortfolio.propTypes = {
+  portfolio: PropTypes.objectOf(PropTypes.string),
+  dashboard: PropTypes.arrayOf(PropTypes.objectOf(
+    PropTypes.oneOfType([PropTypes.string, PropTypes.number]))),
+  user: PropTypes.shape({
+    displayName: PropTypes.string,
+    uid: PropTypes.string,
+  })
+};
+
+export default connect(mapStateToProps)(UserPortfolio);

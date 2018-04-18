@@ -9,6 +9,7 @@ import { writeCurrency, getUserData } from '../../helper/firebaseFunctions.js';
 import UserPortfolio from '../UserPortfolio/UserPortfolio';
 import TopTen from '../TopTen/TopTen';
 import './Home.css';
+import PropTypes from 'prop-types';
 
 export class Home extends Component {
   constructor(props) {
@@ -94,12 +95,26 @@ export const mapStateToProps = (state) => ({
   dashboard: state.dashboard,
   user: state.user,
   portfolio: state.portfolio
-})
+});
 
 export const mapDispatchToProps = (dispatch) => ({
   addCurrency: (currency) => dispatch(addCurrency(currency)),
   logIn: (user) => dispatch(addUser(user)),
   getUserPortfolio: (portfolio) => dispatch(getUserPortfolio(portfolio))
-})
+});
+
+Home.propTypes = {
+  logIn: PropTypes.func,
+  addCurrency: PropTypes.func,
+  getUserPortfolio: PropTypes.func,
+  portfolio: PropTypes.objectOf(PropTypes.string),
+  dashboard: PropTypes.arrayOf(PropTypes.objectOf(
+    PropTypes.oneOfType([PropTypes.string, PropTypes.number]))),
+  user: PropTypes.shape({
+    displayName: PropTypes.string,
+    uid: PropTypes.string,
+  })
+};
+
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Home));

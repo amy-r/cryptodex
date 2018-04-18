@@ -7,6 +7,7 @@ import { fetchApi } from '../../apiCalls/apiCalls.js';
 import { connect } from 'react-redux';
 import { addDashboard } from '../../actions/addDashboard';
 import * as helper from '../../helper/helper';
+import PropTypes from 'prop-types';
 
 export class App extends Component {
 
@@ -35,5 +36,9 @@ export class App extends Component {
 export const mapDispatchToProps = (dispatch) => ({
   addDashboard: (dashboard) => dispatch(addDashboard(dashboard))
 })
+
+App.propTypes = {
+  addDashboard: PropTypes.func,
+};
 
 export default withRouter(connect(null, mapDispatchToProps)(App));

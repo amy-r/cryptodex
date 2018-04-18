@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import './TopTen.css';
+import PropTypes from 'prop-types';
 
 export const TopTen = (props) => {
 
@@ -33,6 +34,10 @@ export const TopTen = (props) => {
 export const mapStateToProps = (state) => ({
   dashboard: state.dashboard
 })
+
+TopTen.propTypes = {
+  addDashboard: PropTypes.func,
+};
 
 export default connect(mapStateToProps, null)(TopTen)
 
