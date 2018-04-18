@@ -3,13 +3,12 @@ import './App.css';
 import { Route, withRouter } from 'react-router-dom'
 import LandingPage from '../../components/Landing';
 import HomePage from '../Home/Home';
-import LoadingPage from '../Loading/Loading'
 import { fetchApi } from '../../apiCalls/apiCalls.js';
 import { connect } from 'react-redux';
 import { addDashboard } from '../../actions/addDashboard';
 import * as helper from '../../helper/helper';
 
-class App extends Component {
+export class App extends Component {
 
   componentDidMount = async () => {
     const dashboard = await fetchApi();
@@ -26,7 +25,6 @@ class App extends Component {
     <div>
       <Route exact path='/' component={LandingPage} />
       <Route exact path='/home' component={HomePage} /> 
-      <Route exact path='/loading' component={LoadingPage} />
       <div className='content-container'/>
       <div className='blur' />
     </div>

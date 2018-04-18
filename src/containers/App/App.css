@@ -17,9 +17,9 @@
 .blur {
   /* All the background image supports */
   transform: translate(0px, 0px, 0px);
-  /*background-image: -webkit-linear-gradient(bottom left, rgba(43, 40, 50, 0.8) 0%, rgba(83, 86, 99, 0.8) 45%, rgba(69, 77, 91, 0.6) 60%);*/
-  /*background-image: -moz-linear-gradient(bottom left, rgba(43, 40, 50, 0.8) 0%, rgba(83, 86, 99, 0.8) 45%, rgba(69, 77, 91, 0.6) 60%);*/
-  /*background-image: -o-linear-gradient(bottom left, rgba(43, 40, 50, 0.8) 0%, rgba(83, 86, 99, 0.8) 45%, rgba(69, 77, 91, 0.6) 60%);*/
+  background-image: -webkit-linear-gradient(bottom left, rgba(50, 8, 87, 0.8) 0%, rgba(93, 0, 166, 0.8) 45%, rgba(119, 0, 214, 0.6) 60%); 
+  background-image: -moz-linear-gradient(bottom left, rgba(50, 8, 87, 0.8) 0%, rgba(93, 0, 166, 0.8) 45%, rgba(119, 0, 214, 0.6) 60%); 
+  background-image: -o-linear-gradient(bottom left, rgba(50, 8, 87, 0.8) 0%, rgba(93, 0, 166, 0.8) 45%, rgba(119, 0, 214, 0.6) 60%); 
   background-image: linear-gradient(to top right, rgba(50, 8, 87, 0.8) 0%, rgba(93, 0, 166, 0.8) 45%, rgba(119, 0, 214, 0.6) 60%);
   position: absolute;
   width: 100%;
@@ -45,9 +45,9 @@
   z-index: -1;
 
   /* Setting the gradient. Adds depth, and glass like effect. */
-  /*background-image: -webkit-linear-gradient(289deg, rgba(43,40,50,0.8) 0%, rgba(43,40,50,0.4) 46%, rgba(0,0,0,0.05) 50%);*/
-  /*background-image: -moz-linear-gradient(289deg, rgba(43,40,50,0.8) 0%, rgba(43,40,50,0.4) 46%, rgba(0,0,0,0.05) 50%);*/
-  /*background-image: -o-linear-gradient(289deg, rgba(43,40,50,0.8) 0%, rgba(43,40,50,0.4) 46%, rgba(0,0,0,0.05) 50%);*/
+  background-image: -webkit-linear-gradient(289deg, rgba(43,40,50,0.8) 0%, rgba(43,40,50,0.4) 46%, rgba(0,0,0,0.05) 50%);
+  background-image: -moz-linear-gradient(289deg, rgba(43,40,50,0.8) 0%, rgba(43,40,50,0.4) 46%, rgba(0,0,0,0.05) 50%);
+  background-image: -o-linear-gradient(289deg, rgba(43,40,50,0.8) 0%, rgba(43,40,50,0.4) 46%, rgba(0,0,0,0.05) 50%);
   background-image: linear-gradient(-19deg, rgba(43,40,50,0.8) 0%, rgba(43,40,50,0.4) 46%, rgba(0,0,0,0.05) 50%);
 
   /* Blur to add depth. High to create smooth transition */
@@ -58,5 +58,4 @@
 
 h1 {
   font-family: 'Open Sans', sans-serif;
-
 }
