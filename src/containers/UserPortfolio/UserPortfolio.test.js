@@ -12,7 +12,7 @@ describe( 'UserPortfolio', () => {
   let mockPortfolio;
 
   beforeEach( () => {
-    mockPortfolio = { BTC: 1, ETH: 1, FAKECOIN:1}
+    mockPortfolio = { BTC: '1', ETH: '1', FAKECOIN: '1'}
     wrapper = shallow(<UserPortfolio portfolio={mockPortfolio} dashboard={mockDashboard}/>)
   })
   

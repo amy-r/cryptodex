@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Route, withRouter } from 'react-router-dom'
+import { Route, withRouter } from 'react-router-dom';
 import LandingPage from '../../components/Landing/Landing';
 import HomePage from '../Home/Home';
 import { fetchApi } from '../../apiCalls/apiCalls.js';
@@ -23,22 +23,22 @@ export class App extends Component {
 
   render() {
     return (
-    <div>
-      <Route exact path='/' component={LandingPage} />
-      <Route exact path='/home' component={HomePage} /> 
-      <div className='content-container'/>
-      <div className='blur' />
-    </div>
+      <div>
+        <Route exact path='/' component={LandingPage} />
+        <Route exact path='/home' component={HomePage} /> 
+        <div className='content-container'/>
+        <div className='blur' />
+      </div>
     );
   }
 }
 
 export const mapDispatchToProps = (dispatch) => ({
   addDashboard: (dashboard) => dispatch(addDashboard(dashboard))
-})
+});
 
 App.propTypes = {
-  addDashboard: PropTypes.func,
+  addDashboard: PropTypes.func
 };
 
 export default withRouter(connect(null, mapDispatchToProps)(App));

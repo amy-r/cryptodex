@@ -29,7 +29,7 @@ ShallowWrapper {
           ]
     }
     getUserPortfolio={[Function]}
-    history={Array []}
+    history={Object {}}
     portfolio={
         Object {
             "BTC": "1",
@@ -58,7 +58,6 @@ ShallowWrapper {
       "children": Array [
         <header>
           <h1>
-                     
                     <span
                               className="crypto"
                     >
@@ -74,7 +73,7 @@ ShallowWrapper {
                     className="logout"
                     onClick={[Function]}
           >
-                     Log Out 
+                    Log Out
           </button>
 </header>,
         <div
@@ -97,23 +96,17 @@ ShallowWrapper {
                                         <option
                                                   value="BTC"
                                         >
-                                                   
                                                   BTC
-                                                   
                                         </option>
                                         <option
                                                   value="ETH"
                                         >
-                                                   
                                                   ETH
-                                                   
                                         </option>
                                         <option
                                                   value="XRP"
                                         >
-                                                   
                                                   XRP
-                                                   
                                         </option>
                               </select>
                               <input
@@ -132,7 +125,9 @@ ShallowWrapper {
                     className="right"
           >
                     <h2>
-                               Today's Market 
+                               
+                              Today's Market
+                               
                     </h2>
                     <Connect(Component) />
           </div>
@@ -148,7 +143,6 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <h1>
-               
               <span
                             className="crypto"
               >
@@ -164,7 +158,7 @@ ShallowWrapper {
               className="logout"
               onClick={[Function]}
 >
-               Log Out 
+              Log Out
 </button>,
           ],
         },
@@ -176,7 +170,6 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                " ",
                 <span
                   className="crypto"
 >
@@ -191,7 +184,6 @@ ShallowWrapper {
             },
             "ref": null,
             "rendered": Array [
-              " ",
               Object {
                 "instance": null,
                 "key": undefined,
@@ -224,12 +216,12 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": " Log Out ",
+              "children": "Log Out",
               "className": "logout",
               "onClick": [Function],
             },
             "ref": null,
-            "rendered": " Log Out ",
+            "rendered": "Log Out",
             "type": "button",
           },
         ],
@@ -258,23 +250,17 @@ ShallowWrapper {
                                           <option
                                                         value="BTC"
                                           >
-                                                         
                                                         BTC
-                                                         
                                           </option>
                                           <option
                                                         value="ETH"
                                           >
-                                                         
                                                         ETH
-                                                         
                                           </option>
                                           <option
                                                         value="XRP"
                                           >
-                                                         
                                                         XRP
-                                                         
                                           </option>
                             </select>
                             <input
@@ -293,7 +279,9 @@ ShallowWrapper {
               className="right"
 >
               <h2>
-                             Today's Market 
+                             
+                            Today's Market
+                             
               </h2>
               <Connect(Component) />
 </div>,
@@ -322,23 +310,17 @@ ShallowWrapper {
                                     <option
                                                       value="BTC"
                                     >
-                                                       
                                                       BTC
-                                                       
                                     </option>
                                     <option
                                                       value="ETH"
                                     >
-                                                       
                                                       ETH
-                                                       
                                     </option>
                                     <option
                                                       value="XRP"
                                     >
-                                                       
                                                       XRP
-                                                       
                                     </option>
                   </select>
                   <input
@@ -390,23 +372,17 @@ ShallowWrapper {
                       <option
                                             value="BTC"
                       >
-                                             
                                             BTC
-                                             
                       </option>
                       <option
                                             value="ETH"
                       >
-                                             
                                             ETH
-                                             
                       </option>
                       <option
                                             value="XRP"
                       >
-                                             
                                             XRP
-                                             
                       </option>
 </select>,
                     <input
@@ -433,23 +409,17 @@ ShallowWrapper {
                         <option
                           value="BTC"
 >
-                           
                           BTC
-                           
 </option>,
                         <option
                           value="ETH"
 >
-                           
                           ETH
-                           
 </option>,
                         <option
                           value="XRP"
 >
-                           
                           XRP
-                           
 </option>,
                       ],
                       "name": "name",
@@ -462,19 +432,11 @@ ShallowWrapper {
                         "key": "BTC",
                         "nodeType": "host",
                         "props": Object {
-                          "children": Array [
-                            " ",
-                            "BTC",
-                            " ",
-                          ],
+                          "children": "BTC",
                           "value": "BTC",
                         },
                         "ref": null,
-                        "rendered": Array [
-                          " ",
-                          "BTC",
-                          " ",
-                        ],
+                        "rendered": "BTC",
                         "type": "option",
                       },
                       Object {
@@ -482,19 +444,11 @@ ShallowWrapper {
                         "key": "ETH",
                         "nodeType": "host",
                         "props": Object {
-                          "children": Array [
-                            " ",
-                            "ETH",
-                            " ",
-                          ],
+                          "children": "ETH",
                           "value": "ETH",
                         },
                         "ref": null,
-                        "rendered": Array [
-                          " ",
-                          "ETH",
-                          " ",
-                        ],
+                        "rendered": "ETH",
                         "type": "option",
                       },
                       Object {
@@ -502,19 +456,11 @@ ShallowWrapper {
                         "key": "XRP",
                         "nodeType": "host",
                         "props": Object {
-                          "children": Array [
-                            " ",
-                            "XRP",
-                            " ",
-                          ],
+                          "children": "XRP",
                           "value": "XRP",
                         },
                         "ref": null,
-                        "rendered": Array [
-                          " ",
-                          "XRP",
-                          " ",
-                        ],
+                        "rendered": "XRP",
                         "type": "option",
                       },
                     ],
@@ -559,7 +505,9 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <h2>
-                   Today's Market 
+                   
+                  Today's Market
+                   
 </h2>,
                 <Connect(Component) />,
               ],
@@ -572,10 +520,18 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": " Today's Market ",
+                  "children": Array [
+                    " ",
+                    "Today's Market",
+                    " ",
+                  ],
                 },
                 "ref": null,
-                "rendered": " Today's Market ",
+                "rendered": Array [
+                  " ",
+                  "Today's Market",
+                  " ",
+                ],
                 "type": "h2",
               },
               Object {
@@ -605,7 +561,6 @@ ShallowWrapper {
         "children": Array [
           <header>
             <h1>
-                         
                         <span
                                     className="crypto"
                         >
@@ -621,7 +576,7 @@ ShallowWrapper {
                         className="logout"
                         onClick={[Function]}
             >
-                         Log Out 
+                        Log Out
             </button>
 </header>,
           <div
@@ -644,23 +599,17 @@ ShallowWrapper {
                                                 <option
                                                             value="BTC"
                                                 >
-                                                             
                                                             BTC
-                                                             
                                                 </option>
                                                 <option
                                                             value="ETH"
                                                 >
-                                                             
                                                             ETH
-                                                             
                                                 </option>
                                                 <option
                                                             value="XRP"
                                                 >
-                                                             
                                                             XRP
-                                                             
                                                 </option>
                                     </select>
                                     <input
@@ -679,7 +628,9 @@ ShallowWrapper {
                         className="right"
             >
                         <h2>
-                                     Today's Market 
+                                     
+                                    Today's Market
+                                     
                         </h2>
                         <Connect(Component) />
             </div>
@@ -695,7 +646,6 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <h1>
-                 
                 <span
                                 className="crypto"
                 >
@@ -711,7 +661,7 @@ ShallowWrapper {
                 className="logout"
                 onClick={[Function]}
 >
-                 Log Out 
+                Log Out
 </button>,
             ],
           },
@@ -723,7 +673,6 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  " ",
                   <span
                     className="crypto"
 >
@@ -738,7 +687,6 @@ ShallowWrapper {
               },
               "ref": null,
               "rendered": Array [
-                " ",
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -771,12 +719,12 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": " Log Out ",
+                "children": "Log Out",
                 "className": "logout",
                 "onClick": [Function],
               },
               "ref": null,
-              "rendered": " Log Out ",
+              "rendered": "Log Out",
               "type": "button",
             },
           ],
@@ -805,23 +753,17 @@ ShallowWrapper {
                                                 <option
                                                                 value="BTC"
                                                 >
-                                                                 
                                                                 BTC
-                                                                 
                                                 </option>
                                                 <option
                                                                 value="ETH"
                                                 >
-                                                                 
                                                                 ETH
-                                                                 
                                                 </option>
                                                 <option
                                                                 value="XRP"
                                                 >
-                                                                 
                                                                 XRP
-                                                                 
                                                 </option>
                                 </select>
                                 <input
@@ -840,7 +782,9 @@ ShallowWrapper {
                 className="right"
 >
                 <h2>
-                                 Today's Market 
+                                 
+                                Today's Market
+                                 
                 </h2>
                 <Connect(Component) />
 </div>,
@@ -869,23 +813,17 @@ ShallowWrapper {
                                         <option
                                                             value="BTC"
                                         >
-                                                             
                                                             BTC
-                                                             
                                         </option>
                                         <option
                                                             value="ETH"
                                         >
-                                                             
                                                             ETH
-                                                             
                                         </option>
                                         <option
                                                             value="XRP"
                                         >
-                                                             
                                                             XRP
-                                                             
                                         </option>
                     </select>
                     <input
@@ -937,23 +875,17 @@ ShallowWrapper {
                         <option
                                                 value="BTC"
                         >
-                                                 
                                                 BTC
-                                                 
                         </option>
                         <option
                                                 value="ETH"
                         >
-                                                 
                                                 ETH
-                                                 
                         </option>
                         <option
                                                 value="XRP"
                         >
-                                                 
                                                 XRP
-                                                 
                         </option>
 </select>,
                       <input
@@ -980,23 +912,17 @@ ShallowWrapper {
                           <option
                             value="BTC"
 >
-                             
                             BTC
-                             
 </option>,
                           <option
                             value="ETH"
 >
-                             
                             ETH
-                             
 </option>,
                           <option
                             value="XRP"
 >
-                             
                             XRP
-                             
 </option>,
                         ],
                         "name": "name",
@@ -1009,19 +935,11 @@ ShallowWrapper {
                           "key": "BTC",
                           "nodeType": "host",
                           "props": Object {
-                            "children": Array [
-                              " ",
-                              "BTC",
-                              " ",
-                            ],
+                            "children": "BTC",
                             "value": "BTC",
                           },
                           "ref": null,
-                          "rendered": Array [
-                            " ",
-                            "BTC",
-                            " ",
-                          ],
+                          "rendered": "BTC",
                           "type": "option",
                         },
                         Object {
@@ -1029,19 +947,11 @@ ShallowWrapper {
                           "key": "ETH",
                           "nodeType": "host",
                           "props": Object {
-                            "children": Array [
-                              " ",
-                              "ETH",
-                              " ",
-                            ],
+                            "children": "ETH",
                             "value": "ETH",
                           },
                           "ref": null,
-                          "rendered": Array [
-                            " ",
-                            "ETH",
-                            " ",
-                          ],
+                          "rendered": "ETH",
                           "type": "option",
                         },
                         Object {
@@ -1049,19 +959,11 @@ ShallowWrapper {
                           "key": "XRP",
                           "nodeType": "host",
                           "props": Object {
-                            "children": Array [
-                              " ",
-                              "XRP",
-                              " ",
-                            ],
+                            "children": "XRP",
                             "value": "XRP",
                           },
                           "ref": null,
-                          "rendered": Array [
-                            " ",
-                            "XRP",
-                            " ",
-                          ],
+                          "rendered": "XRP",
                           "type": "option",
                         },
                       ],
@@ -1106,7 +1008,9 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <h2>
-                     Today's Market 
+                     
+                    Today's Market
+                     
 </h2>,
                   <Connect(Component) />,
                 ],
@@ -1119,10 +1023,18 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": " Today's Market ",
+                    "children": Array [
+                      " ",
+                      "Today's Market",
+                      " ",
+                    ],
                   },
                   "ref": null,
-                  "rendered": " Today's Market ",
+                  "rendered": Array [
+                    " ",
+                    "Today's Market",
+                    " ",
+                  ],
                   "type": "h2",
                 },
                 Object {

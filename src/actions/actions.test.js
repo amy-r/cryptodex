@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { addCurrency } from './addCurrency';
 import { addDashboard } from './addDashboard';
 import { addUser } from './addUser';

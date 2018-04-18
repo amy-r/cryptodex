@@ -18,7 +18,7 @@ export class Home extends Component {
     this.state = {
       name: 'BTC',
       amount: ''
-    }
+    };
   }
 
   componentDidMount = () => {
@@ -28,21 +28,23 @@ export class Home extends Component {
         const uid = user.uid;
         const userInfo = { displayName, uid};
         this.props.logIn(userInfo);     
-        getUserData(uid).then((portfolio) => this.props.getUserPortfolio(portfolio));
+        getUserData(uid).then(
+          (portfolio) => this.props.getUserPortfolio(portfolio));
       } else {
         this.props.history.push('/');
       }
-    }) 
+    });
   }
 
   handleSubmit = (event) => {
     const { addCurrency, user } = this.props;
     event.preventDefault();
-    const newCurrency = {...this.state}
+    const newCurrency = {...this.state};
     addCurrency(newCurrency);
     writeCurrency(user.uid, newCurrency);
     this.setState({name: '', amount: ''});
-    getUserData(user.uid).then((portfolio) => this.props.getUserPortfolio(portfolio));
+    getUserData(user.uid).then(
+      (portfolio) => this.props.getUserPortfolio(portfolio));
   }
 
   handleChange = (event) => {
@@ -57,19 +59,27 @@ export class Home extends Component {
   }
 
   createOptions = () => {
-    const { dashboard } = this.props
+    const { dashboard } = this.props;
     const options = dashboard.map( (curr) => {
-      return <option key={curr.currency} value={curr.currency}> {curr.currency} </option>
-    })
-    return options
+      return (
+        <option key={curr.currency} value={curr.currency}> 
+          {curr.currency} 
+        </option> );
+    });
+    return options;
   }
 
   render() {
     return (
       <div>
         <header>
-          <h1> <span className='crypto'>CRYPTO</span><span className='dex'>DEX</span></h1>
-          <button className='logout' onClick= {this.logOut}> Log Out </button>     
+          <h1> 
+            <span className='crypto'>CRYPTO</span>
+            <span className='dex'>DEX</span>
+          </h1>
+          <button className='logout' onClick= {this.logOut}> 
+            Log Out 
+          </button>     
         </header>
         <div className='body'>
           <div className= 'left'>
@@ -77,19 +87,25 @@ export class Home extends Component {
             <h4> Add a currency you own </h4>
             <form onSubmit= {this.handleSubmit}>
               <select name='name' onChange={this.handleChange}>
-               {this.createOptions()}
+                {this.createOptions()}
               </select>  
-              <input type='text' name='amount' placeholder='amount' value={this.state.amount} onChange={this.handleChange}/>
+              <input 
+                type='text' 
+                name='amount' 
+                placeholder='amount' 
+                value={this.state.amount} 
+                onChange={this.handleChange}
+              />
               <input type='submit' />
             </form>
           </div>  
           <div className='right'>
-            <h2> Today's Market </h2>  
+            <h2> {"Today's Market"} </h2>  
             <TopTen />
           </div>
         </div>    
       </div>
-    )   
+    );   
   }
 }
 
@@ -110,13 +126,15 @@ Home.propTypes = {
   logIn: PropTypes.func,
   addCurrency: PropTypes.func,
   getUserPortfolio: PropTypes.func,
+  logOut: PropTypes.func,
   portfolio: PropTypes.objectOf(PropTypes.string),
   dashboard: PropTypes.arrayOf(PropTypes.objectOf(
     PropTypes.oneOfType([PropTypes.string, PropTypes.number]))),
   user: PropTypes.shape({
     displayName: PropTypes.string,
-    uid: PropTypes.string,
-  })
+    uid: PropTypes.string
+  }),
+  history: PropTypes.object
 };
 
 

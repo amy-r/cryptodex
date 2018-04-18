@@ -12,8 +12,8 @@ export const TopTen = (props) => {
         <td> {curr.marketCap} </td>
         <td> {curr.percentage} </td>
       </tr>      
-    )
-  })
+    );
+  });
 
   return (
     <div className='TopTen'>
@@ -24,20 +24,23 @@ export const TopTen = (props) => {
             <td> Market Cap </td>
             <td> % </td>
           </tr>
-        {tableData}
+          {tableData}
         </tbody>
       </table>
     </div>
-  )
-}
+  );
+};
 
 export const mapStateToProps = (state) => ({
   dashboard: state.dashboard
-})
+});
 
 TopTen.propTypes = {
-  addDashboard: PropTypes.func,
+  dashboard: PropTypes.arrayOf(
+    PropTypes.objectOf(PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number])))
 };
 
-export default connect(mapStateToProps, null)(TopTen)
+export default connect(mapStateToProps, null)(TopTen);
 
