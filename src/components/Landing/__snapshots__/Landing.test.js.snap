@@ -46,7 +46,7 @@ ShallowWrapper {
           }
 />,
         <h2>
-           Today's Market 
+           Current Market Index
 </h2>,
         <Connect(Component) />,
       ],
@@ -135,10 +135,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": " Today's Market ",
+          "children": " Current Market Index",
         },
         "ref": null,
-        "rendered": " Today's Market ",
+        "rendered": " Current Market Index",
         "type": "h2",
       },
       Object {
@@ -188,7 +188,7 @@ ShallowWrapper {
             }
 />,
           <h2>
-             Today's Market 
+             Current Market Index
 </h2>,
           <Connect(Component) />,
         ],
@@ -277,10 +277,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": " Today's Market ",
+            "children": " Current Market Index",
           },
           "ref": null,
-          "rendered": " Today's Market ",
+          "rendered": " Current Market Index",
           "type": "h2",
         },
         Object {

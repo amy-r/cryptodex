@@ -100,7 +100,7 @@ export class Home extends Component {
             </form>
           </div>  
           <div className='right'>
-            <h2> {"Today's Market"} </h2>  
+            <h2> {"Today's Market Cap Index"} </h2>  
             <TopTen />
           </div>
         </div>    
