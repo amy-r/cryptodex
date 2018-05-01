@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 export const writeCurrency = jest.fn();
 
 export const getUserData = jest.fn().mockImplementation( () => {
